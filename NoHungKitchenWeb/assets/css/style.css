@@ -1,0 +1,1714 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+html {
+  max-height: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+.loginBackground {
+  position: relative;
+  background-color: #FFA451;
+  height: 100%;
+  width: 100%;
+  padding: 0 170px;
+}
+.loginBackground .loginBackgroundOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/loginBackground.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.loginBackground .loginContainer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.loginBackground .loginContainer .cookManSection {
+  position: relative;
+  text-align: left;
+  width: 50%;
+  padding-left: 50px;
+}
+.loginBackground .loginContainer .cookManSection img {
+  width: 100%;
+  max-width: 300px;
+  height: 448px;
+}
+.loginBackground .loginContainer .loginContents {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.loginBackground .loginContainer .loginContents form {
+  width: 100%;
+  max-width: 500px;
+  height: 650px;
+  background-color: #FFFFFF;
+  border-radius: 100px 100px 0 0;
+  box-shadow: 0px 5px 20px #00000029;
+}
+.loginBackground .loginContainer .loginContents form .loginLogo {
+  position: relative;
+  text-align: center;
+  margin-top: -30px;
+}
+.loginBackground .loginContainer .loginContents form .loginHeading {
+  position: relative;
+  padding: 30px 50px 20px 50px;
+}
+.loginBackground .loginContainer .loginContents form .loginHeading h2 {
+  color: #555555;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
+  position: relative;
+}
+.loginBackground .loginContainer .loginContents form .loginHeading h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #4d4d4d;
+}
+.loginBackground .loginContainer .loginContents form .formContents {
+  padding: 0 50px 30px 50px;
+  position: relative;
+}
+.loginBackground .loginContainer .loginContents form .formContents h3 {
+  font-size: 36px;
+  color: #FFA451;
+  letter-spacing: -0.07px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.loginBackground .loginContainer .loginContents form .formContents h4 {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: solid 1px #CFCFCF;
+  padding: 0 15px;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group input:focus {
+  transition: all 0.5s ease;
+  border-color: #FFA451;
+  box-shadow: none;
+  outline: none;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group label {
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 13px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #fff;
+  padding: 0 10px;
+  color: #999;
+  transition: all 0.5s ease;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group input:focus + label,
+.loginBackground .loginContainer .loginContents form .formContents .form-group input:valid + label {
+  font-size: 14px;
+  top: -10px;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group input:focus + label {
+  color: #FFA451;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group.loginbuttonsSections {
+  margin-top: 46px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group.loginbuttonsSections .forgotPasswordText {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  transition: all 0.5s ease;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group.loginbuttonsSections .forgotPasswordText:hover {
+  color: #FFA451;
+  transition: all 0.5s ease;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group.loginbuttonsSections .loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background-color: #FFA451;
+  border-radius: 8px;
+  padding: 0px 15px;
+  height: 50px;
+  border: solid 1.5px #FFA451;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group.loginbuttonsSections .loginButton svg .a {
+  fill: #FFFFFF;
+  transition: all 0.5s ease;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group.loginbuttonsSections .loginButton:hover {
+  border: solid 1.5px #FFA451;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+.loginBackground .loginContainer .loginContents form .formContents .form-group.loginbuttonsSections .loginButton:hover svg .a {
+  fill: #FFA451;
+  transition: all 0.5s ease;
+}
+.loginBackground .loginContainer .loginContents form .dontHaveAccount {
+  position: absolute;
+  text-align: center;
+  border: solid 1px #CCC;
+  padding: 10px;
+  margin-top: 8px;
+  left: 98px;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  width: 500px;
+}
+.loginBackground .loginContainer .loginContents form .dontHaveAccount p {
+  margin: 0;
+  font-size: 14px;
+}
+.loginBackground .loginContainer .loginContents form .dontHaveAccount p a {
+  color: #FFA451;
+  text-transform: uppercase;
+}
+
+.outerSectionLayout {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+}
+.outerSectionLayout .leftSideSection {
+  position: fixed;
+  width: 100%;
+  max-width: 240px;
+  background: transparent linear-gradient(180deg, #FCAD65 0%, #FFA451 100%) 0% 0% no-repeat padding-box;
+  height: 100%;
+}
+.outerSectionLayout .leftSideSection .dashboardLogoSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  box-shadow: 0px 5px 20px #00000029;
+  background-color: #FFA451;
+  margin-bottom: 30px;
+}
+.outerSectionLayout .leftSideSection .dashboardLogoSection img {
+  width: 100%;
+  max-width: 141px;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu {
+  position: relative;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu ul li {
+  position: relative;
+  margin-bottom: 5px;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu ul li:last-child {
+  margin-bottom: 0;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu ul li a {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 13px 0 13px 20px;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu ul li a:hover {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  background-color: #EF7B13;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu ul li a img {
+  margin-right: 20px;
+}
+.outerSectionLayout .leftSideSection .dashbaordMenu ul li a.active {
+  background-color: #EF7B13;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .rightSideSection {
+  position: relative;
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  height: 100%;
+  max-height: 100%;
+  background-image: url("../images/dashbaordBackgourd.svg");
+  background-color: #F1F1F1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection {
+  width: 100%;
+  max-width: calc(100% - 240px);
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background-color: #FFFFFF;
+  height: 90px;
+  box-shadow: 0px 5px 20px #00000029;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .toggleButtons {
+  position: relative;
+  margin-right: 30px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .toggleButtons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .toggleButtons button svg {
+  width: 25px;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .toggleButtons button svg:hover .a .b {
+  fill: #FFA451;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .toggleButtons button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox {
+  position: relative;
+  width: 250px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox form {
+  width: 100%;
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox form svg {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 19px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox form svg .a {
+  fill: #444341;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox form input {
+  width: 100%;
+  color: #FFA451;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 40px;
+  border: transparent solid 1px;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox form input::placeholder {
+  color: #A7A8BC;
+  font-size: 14px;
+  font-weight: 600;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox form input:focus {
+  box-shadow: none;
+  outline: none;
+  transition: all 0.5s ease;
+  border: solid 1px #FFA451;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton {
+  position: relative;
+  margin-right: 20px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button {
+  display: flex;
+  align-items: center;
+  background-color: #FFA451;
+  border-radius: 6px;
+  padding: 12px 20px;
+  border: solid 1px transparent;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button svg {
+  margin-right: 12px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button svg .a {
+  fill: #FFFFFF;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button:hover {
+  transition: all 0.5s ease;
+  border: solid 1px #FFA451;
+  color: #FFA451;
+  background-color: transparent;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button:hover svg .a {
+  fill: #FFA451;
+  transition: all 0.5s ease;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerNotitications {
+  position: relative;
+  margin-right: 20px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerNotitications button {
+  background-color: #F3F6FA;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  position: relative;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerNotitications button img {
+  width: 20px;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerNotitications button span {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FFA451;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerNotitications button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName {
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userImgSection {
+  position: relative;
+  width: 52px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 10px;
+  box-shadow: 0px 5px 20px #00000029;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userImgSection img {
+  width: 100%;
+  height: 100%;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userInformSection {
+  position: relative;
+  text-align: left;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userInformSection h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4d4d4d;
+  margin: 0 0 -5px 0;
+}
+.outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userInformSection span {
+  color: #444341;
+  font-size: 13px;
+  font-weight: 500;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout {
+  padding: 120px 30px 30px 30px;
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .commonHeading {
+  position: relative;
+  margin-bottom: 20px;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .commonHeading h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2F3443;
+  margin: 0;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 140px;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard .activeOrderSection {
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard .activeOrderSection h3 {
+  font-size: 40px;
+  margin: 0;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard .activeOrderSection p {
+  font-size: 14px;
+  margin: 0;
+  color: #2F3443;
+  font-weight: 600;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.acitveColorName {
+  border-top: 5px #BEE8FF solid;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.acitveColorName .activeOrderSection h3 {
+  color: #BEE8FF;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.upcomingOrderName {
+  border-top: 5px #FEDF7C solid;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.upcomingOrderName .activeOrderSection h3 {
+  color: #FEDF7C;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.penddingOrderName {
+  border-top: 5px #FCA896 solid;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.penddingOrderName .activeOrderSection h3 {
+  color: #FCA896;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.CompletedOrdersName {
+  border-top: 5px #7EDABF solid;
+}
+.outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard.CompletedOrdersName .activeOrderSection h3 {
+  color: #7EDABF;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions {
+  position: relative;
+  width: 100%;
+  padding: 0 30px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 30px;
+  height: 100%;
+  max-height: 330px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader h2 {
+  position: relative;
+  font-size: 18px;
+  color: #2F3443;
+  font-weight: bold;
+  margin: 0;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader .saleOverveiwRightSide {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader .saleOverveiwRightSide p {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+  color: #2F3443;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader .saleOverveiwRightSide p span {
+  color: #FFA451;
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader .saleOverveiwRightSide select {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader .saleOverveiwRightSide a {
+  position: relative;
+  display: block;
+  margin-left: 20px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader .saleOverveiwRightSide a svg {
+  width: 30px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewHeader .saleOverveiwRightSide a svg .a {
+  fill: #FFA451;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewBody {
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .saleOverviewBody img {
+  width: 100%;
+  height: 100%;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable {
+  position: relative;
+  width: 100%;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr {
+  border: none;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr th {
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #CFCFCF;
+  font-weight: 500;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td {
+  border: none;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .userNameImg {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .userNameImg img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .userNameImg p {
+  margin: 0;
+  display: flex;
+  align-items: initial;
+  flex-direction: column;
+  justify-content: left;
+  color: #FFA451;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .userNameImg p span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #4d4d4d;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .timingButtons {
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 6px 10px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .riderNameSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .riderNameSection p {
+  margin: 0;
+  white-space: nowrap;
+  width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .riderNameSection svg {
+  width: 20px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .activeOrdertable table tr td .riderNameSection svg .a {
+  fill: #4d4d4d;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection {
+  position: relative;
+  margin-top: 35px;
+  padding-bottom: 20px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningContentSection {
+  position: relative;
+  text-align: center;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningContentSection .earningProfitSection {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningContentSection .earningProfitSection .profiteCount {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningContentSection .earningProfitSection .profiteCount h2 {
+  font-size: 18px;
+  color: #2F3443;
+  margin: 0;
+  font-weight: bold;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningContentSection .earningProfitSection .profiteCount span {
+  font-size: 12px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningContentSection .earningProfitSection img {
+  width: 100%;
+  height: 100%;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningContentSection h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2F3443;
+  margin: 20px 0 0 0;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningWeekDetails {
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningWeekDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningWeekDetails ul li {
+  margin-bottom: 15px;
+  background: #F3F6FA;
+  padding: 10px 10px;
+  box-shadow: 0px 2px 6px #A29E8929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  width: 100%;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningWeekDetails ul li p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningWeekDetails ul li span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7EDABF;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .earningbodySection .earningWeekDetails ul li:last-child {
+  margin-bottom: 0;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody {
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody p {
+  color: #555555;
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.6;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li {
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0px 2px 6px #A29E8929;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li:first-child {
+  background: #BEE8FF;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li:nth-child(2) {
+  background: #7EDABF;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li:last-child {
+  margin-bottom: 0;
+  background: #FEDF7C;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4d4d4d;
+  opacity: 1;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li span {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li span svg {
+  margin-left: 10px;
+  width: 18px;
+  cursor: pointer;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection .statusOrderBody ul li span svg .a {
+  fill: #4d4d4d !important;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox {
+  background-color: #555555;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox .saleOverviewHeader {
+  margin: 0;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox .saleOverviewHeader h2 {
+  color: #FFFFFF;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox .saleOverviewHeader .saleOverveiwRightSide a svg {
+  width: 18px;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox .saleOverviewHeader .saleOverveiwRightSide a svg .a {
+  fill: #FFFFFF;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox .ActiveDeliveriesBody {
+  position: relative;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox .ActiveDeliveriesBody p {
+  margin: 0;
+  color: #FFA451;
+  font-size: 40px;
+  font-weight: bold;
+}
+.outerSectionLayout .rightSideSection .dashboardOtherOptions .saleOverviewSection.ActiveDeliveriesBox .ActiveDeliveriesBody img {
+  width: 100%;
+  max-width: 210px;
+  margin-left: 30px;
+}
+
+.trackDevliveriesSections {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  padding: 120px 30px 30px 30px;
+}
+.trackDevliveriesSections h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2F3443;
+}
+.trackDevliveriesSections .devlieriesUserSection {
+  position: relative;
+  margin-top: 40px;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #FFFFFF;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents {
+  position: relative;
+  width: 100%;
+  border-bottom: solid 1px #dedede;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents .userImages {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents .userImages img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents .userImages .userNameSections {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents .userImages .userNameSections h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 5px 0;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents .userImages .userNameSections span {
+  font-size: 12px;
+  color: #555555;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents .userImages .userNameSections span b {
+  font-weight: normal;
+  border-left: solid 1px #555555;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .headerUserContents button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .userLocations {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .userLocations img {
+  margin-right: 15px;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .userLocations button {
+  background-color: transparent;
+  border: none;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .userLocations button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents .userLocations button img {
+  width: 26px;
+  cursor: pointer;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents:hover {
+  transition: all 0.5s ease;
+}
+.trackDevliveriesSections .devlieriesUserSection .listOfUserDevlieries .userContents:hover .userLocations button {
+  opacity: 1;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections {
+  position: relative;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  position: sticky;
+  top: 120px;
+  height: calc(100% - 330px);
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapAddressSection {
+  background-color: #2F3443;
+  border-radius: 5px;
+  padding: 15px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapAddressSection .mapAddressContent {
+  position: relative;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapAddressSection .mapAddressContent p {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapAddressSection .mapAddressContent span {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapAddressSection a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFA451;
+  border-radius: 5px;
+  width: 50px;
+  height: 40px;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapAddressSection a svg .a {
+  fill: #FFFFFF;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo {
+  background-color: #2F3443;
+  border-radius: 5px;
+  padding: 15px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .userInfoMap {
+  display: flex;
+  align-items: center;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .userInfoMap img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .userInfoMap .rationgOnMap {
+  position: relative;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .userInfoMap .rationgOnMap h5 {
+  color: #FFFFFF;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin: 0;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .userInfoMap .rationgOnMap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .userInfoMap .rationgOnMap ul li {
+  margin-right: 5px;
+  color: #FFFFFF;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .userInfoMap .rationgOnMap ul li:first-child {
+  margin-right: 10px;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .OnMapDevliery {
+  display: flex;
+  align-items: center;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .OnMapDevliery img {
+  width: 100%;
+  max-width: 100px;
+  margin: -35px 40px 0 0px;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .OnMapDevliery button {
+  border: none;
+  background-color: transparent;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .OnMapDevliery button img {
+  width: 100%;
+  max-width: 40px;
+  margin: 0;
+}
+.trackDevliveriesSections .devlieriesUserSection .devlieriesMapSections .userInformOnMap .mapUserInfo .OnMapDevliery button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.offerManagementWrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  padding: 120px 30px 10px 30px;
+}
+.offerManagementWrap .offermanageTopHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.offerManagementWrap .offermanageTopHeading h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2F3443;
+}
+.offerManagementWrap .offermanageTopHeading a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background-color: #FFA451;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 8px 15px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.offerManagementWrap .offermanageTopHeading a:hover {
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.offerManagementWrap .offermanageTopHeading a img {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.managementTabSection {
+  position: relative;
+  width: 100%;
+  padding: 0 30px;
+}
+.managementTabSection .tabContentManagement {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0 20px;
+}
+.managementTabSection .tabContentManagement .managementFilterSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.managementTabSection .tabContentManagement .managementFilterSection button {
+  box-shadow: none;
+  background-color: #F3F6FA;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.managementTabSection .tabContentManagement .managementFilterSection button:hover {
+  box-shadow: none;
+  outline: none;
+}
+.managementTabSection .tabContentManagement .managementFilterSection form {
+  position: relative;
+}
+.managementTabSection .tabContentManagement .managementFilterSection form svg {
+  width: 26px;
+  position: absolute;
+  top: 12px;
+  left: 6px;
+}
+.managementTabSection .tabContentManagement .managementFilterSection form svg .a {
+  fill: #4d4d4d;
+}
+.managementTabSection .tabContentManagement .managementFilterSection form input {
+  background-color: #F3F6FA;
+  border: none;
+  outline: none;
+  height: 40px;
+  padding: 10px 10px 10px 40px;
+  border-radius: 5px;
+}
+.managementTabSection .tabContentManagement ul.nav.nav-tabs {
+  margin: 0;
+}
+.managementTabSection .tabContentManagement ul.nav.nav-tabs li {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.managementTabSection .tabContentManagement ul.nav.nav-tabs li a {
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #A7A8BC;
+  padding: 20px;
+  border-bottom: 4px solid transparent;
+}
+.managementTabSection .tabContentManagement ul.nav.nav-tabs li a.active {
+  border-bottom: solid 4px #FFA451;
+  color: #FFA451;
+}
+.managementTabSection .managementOffersTabs {
+  position: relative;
+  width: 100%;
+  padding: 30px 0 0 0;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  background-color: #FFFFFF;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent:hover {
+  transition: all 0.5s ease;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managenmentOferHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managenmentOferHeader .getOfferSection {
+  position: relative;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managenmentOferHeader .getOfferSection h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managenmentOferHeader .getOfferSection span {
+  font-size: 14px;
+  color: #A7A8BC;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managenmentOferHeader .offerCodeSection {
+  position: relative;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managenmentOferHeader .offerCodeSection p {
+  background-color: #BEE8FF;
+  color: #000;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managementOfferBody {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managementOfferBody p {
+  margin: 0;
+  padding: 4px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #7EDABF;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managementOfferBody span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFA451;
+}
+.managementTabSection .managementOffersTabs .managenmentOferContent .managementOfferBody .useAgainSection {
+  color: #CE543D;
+  font-size: 14px;
+  text-transform: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.noMenuAddedSection {
+  position: relative;
+  padding: 120px 30px 30px 30px;
+  height: 100vh;
+  width: 100%;
+}
+.noMenuAddedSection h2 {
+  font-size: 24px;
+  color: #2F3443;
+  font-weight: #000000;
+}
+.noMenuAddedSection .noMenuTabSection {
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  padding: 20px;
+  margin: 30px 0 0 0;
+}
+.noMenuAddedSection .noMenuTabSection .nav.nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noMenuAddedSection .noMenuTabSection .nav.nav-tabs li {
+  border: none;
+  margin-right: 10px;
+}
+.noMenuAddedSection .noMenuTabSection .nav.nav-tabs li a {
+  border: none;
+  font-size: 18px;
+  color: #2F3443;
+  font-weight: 600;
+  opacity: 0.5;
+  padding: 6px 20px;
+  border-bottom: 3px solid transparent;
+}
+.noMenuAddedSection .noMenuTabSection .nav.nav-tabs li a.active {
+  border-bottom: solid 3px #7EDABF;
+  color: #7EDABF;
+}
+.noMenuAddedSection .noMenuTabSection .tab-content {
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+.noMenuAddedSection .noMenuTabSection .tab-content .noMenuBodySection {
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+}
+.noMenuAddedSection .noMenuTabSection .tab-content h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.noMenuAddedSection .noMenuTabSection .tab-content p {
+  font-size: 14px;
+  color: #555555;
+  opacity: 0.6;
+  margin-bottom: 40px;
+}
+.noMenuAddedSection .noMenuTabSection .tab-content a {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 8px 25px;
+  color: #FFFFFF;
+  background-color: #FFA451;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+  transition: all 0.5s ease;
+  border: solid 1px #FFA451;
+}
+.noMenuAddedSection .noMenuTabSection .tab-content a:hover {
+  color: #FFA451;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  border: solid 1px #FFA451;
+  text-decoration: none;
+}
+
+.orderManagementCotents {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.orderManagementCotents .contentOrderManagement {
+  position: relative;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 100%;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: 15px;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+}
+.orderManagementCotents .contentOrderManagement:hover {
+  transition: all 0.5s ease;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader .orderImages {
+  position: relative;
+  display: flex;
+  align-content: center;
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader .orderImages img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader .orderImages .userNameOrdermanagement {
+  position: relative;
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader .orderImages .userNameOrdermanagement h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #4d4d4d;
+  font-family: "Poppins", sans-serif;
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader .orderImages .userNameOrdermanagement span {
+  color: #555555;
+  opacity: 0.5;
+  font-size: 14px;
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader .orderImages .userNameOrdermanagement span b {
+  font-weight: normal;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #ccc;
+}
+.orderManagementCotents .contentOrderManagement .OrderManagementHeader p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #7EDABF;
+  font-family: "Poppins", sans-serif;
+}
+.orderManagementCotents .contentOrderManagement .orderBodyManagement {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.orderManagementCotents .contentOrderManagement .orderBodyManagement .weeklyPlanFood {
+  position: relative;
+}
+.orderManagementCotents .contentOrderManagement .orderBodyManagement .weeklyPlanFood span {
+  font-size: 14px;
+  color: #A7A8BC;
+}
+.orderManagementCotents .contentOrderManagement .orderBodyManagement .weeklyPlanFood .weeklyPlanbreakFast {
+  display: flex;
+  align-items: center;
+}
+.orderManagementCotents .contentOrderManagement .orderBodyManagement .weeklyPlanFood .weeklyPlanbreakFast img {
+  margin-right: 10px;
+}
+.orderManagementCotents .contentOrderManagement .orderBodyManagement .weeklyPlanFood .weeklyPlanbreakFast h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #000000;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter {
+  position: relative;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementAddress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementAddress img {
+  margin-right: 15px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementAddress p {
+  color: #4d4d4d;
+  margin: 0;
+  font-size: 14px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementAddress a svg {
+  width: 60px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementAddress a svg .a {
+  fill: #FFA451;
+  stroke-width: 0px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border: solid 1px transparent;
+  border-radius: 30px;
+  padding: 10px 30px;
+  margin-right: 10px;
+  transition: all 0.5s ease;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a svg {
+  width: 18px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a svg .a {
+  fill: #FFFFFF !important;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a:focus {
+  box-shadow: none;
+  outline: none;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a.rightCheckButton {
+  background-color: #7EDABF;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a.rightCheckButton:hover {
+  border: solid 1px #7EDABF;
+  transition: all 0.5s ease;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a.rightCheckButton:hover svg .a {
+  fill: #7EDABF;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a.closedMarkButton {
+  background-color: #FCA896;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a.ReadyToPickUpButotn {
+  color: #FFFFFF;
+  background-color: #000000;
+  margin-left: 25px;
+  padding: 8px 15px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a.ReadyToPickUpButotn svg {
+  margin-left: 10px;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton a.ReadyToPickUpButotn:hover {
+  text-decoration: none;
+}
+.orderManagementCotents .contentOrderManagement .orderManagementFooter .orderManagementOptionButton span {
+  color: #A7A8BC;
+}
+.orderManagementCotents .salesSummarySection {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.orderManagementCotents .salesSummarySection:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  transition: all 0.5s ease;
+}
+.orderManagementCotents .salesSummarySection img {
+  position: absolute;
+  left: auto;
+  right: 40px;
+  top: 30px;
+  bottom: auto;
+  margin: auto;
+}
+.orderManagementCotents .salesSummarySection .summaryContent {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 20px;
+}
+.orderManagementCotents .salesSummarySection .summaryContent span {
+  font-size: 14px;
+  color: #A7A8BC;
+  display: block;
+  margin: 0;
+}
+.orderManagementCotents .salesSummarySection .summaryContent h3 {
+  font-size: 16px;
+  color: #555555;
+  font-weight: bold;
+}
+.orderManagementCotents .salesSummarySection .summaryContent h3 img {
+  margin-left: 5px;
+  width: 18px;
+  position: relative;
+  right: inherit;
+  top: inherit;
+}
+.orderManagementCotents .salesSummarySection ul {
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 0 0 20px 0;
+  display: flex;
+}
+.orderManagementCotents .salesSummarySection ul li {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.orderManagementCotents .salesSummarySection ul li p {
+  margin: 0;
+  font-size: 21px;
+  font-weight: bold;
+}
+.orderManagementCotents .salesSummarySection ul li span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555555;
+}
+.orderManagementCotents .salesSummarySection ul li:last-child {
+  margin-right: 0;
+}
+.orderManagementCotents .salesSummarySection ul li:last-child p {
+  color: #CE543D;
+}
+.orderManagementCotents .salesSummarySection ul li:nth-child(2) p {
+  color: #FEDF7C;
+}
+.orderManagementCotents .salesSummarySection ul li:first-child p {
+  color: #BEE8FF;
+}
+.orderManagementCotents .salesSummarySection .totalsalesSection {
+  background-color: #5E310E;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orderManagementCotents .salesSummarySection .totalsalesSection img {
+  position: relative;
+  right: inherit;
+  top: inherit;
+  margin: 0;
+}
+.orderManagementCotents .salesSummarySection .totalsalesSection .salesTotalcontent {
+  text-align: right;
+}
+.orderManagementCotents .salesSummarySection .totalsalesSection .salesTotalcontent h4 {
+  color: #FFD2A8;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.orderManagementCotents .salesSummarySection .totalsalesSection .salesTotalcontent span {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+}
+.orderManagementCotents .ProjectedTomorrowSection {
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-bottom: 5px solid #FFA451;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orderManagementCotents .ProjectedTomorrowSection .TomorrowProjectContent {
+  position: relative;
+}
+.orderManagementCotents .ProjectedTomorrowSection .TomorrowProjectContent span {
+  font-size: 24px;
+  color: #FFA451;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.orderManagementCotents .ProjectedTomorrowSection .TomorrowProjectContent p {
+  font-size: 14px;
+  color: #555555;
+  margin: 0;
+}
+
+.orderManagementCotents.orderHistorySection {
+  margin: 0;
+}
+.orderManagementCotents.orderHistorySection .contentOrderManagement .orderManagementFooter .orderManagementOptionButton {
+  text-align: center;
+}
+.orderManagementCotents.orderHistorySection .contentOrderManagement .orderManagementFooter .orderManagementOptionButton span {
+  font-size: 12px;
+  color: #7EDABF;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

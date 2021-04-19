@@ -1,0 +1,341 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+        
+
+            <div class="dashbaordLayout">
+                <div class="commonHeading">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="dashboardCard acitveColorName">
+                            <div class="activeOrderSection">
+                                <h3>15</h3>
+                                <p>Active Orders</p>
+                            </div>
+                            <div class="orderImgSection">
+                                <img src="~/assets/images/activeOrderIcon.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="dashboardCard upcomingOrderName">
+                            <div class="activeOrderSection">
+                                <h3>15</h3>
+                                <p>Upcoming Orders</p>
+                            </div>
+                            <div class="orderImgSection">
+                                <img src="~/assets/images/UpcomingOrders.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="dashboardCard penddingOrderName">
+                            <div class="activeOrderSection">
+                                <h3>15</h3>
+                                <p>Pending Orders</p>
+                            </div>
+                            <div class="orderImgSection">
+                                <img src="~/assets/images/PendingOrders.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="dashboardCard CompletedOrdersName">
+                            <div class="activeOrderSection">
+                                <h3>15</h3>
+                                <p>Completed Orders</p>
+                            </div>
+                            <div class="orderImgSection">
+                                <img src="~/assets/images/CompletedOrders.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboardOtherOptions">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="saleOverviewSection">
+                            <div class="saleOverviewHeader">
+                                <h2>Sales Overview</h2>
+                                <div class="saleOverveiwRightSide">
+                                    <p>Total Earnings <span>₹15,425</span></p>
+                                    <select name="" id="">
+                                        <option value="2021" selected>2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                    </select>
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                         .a {
+                                                                                                                                             fill: #fff;
+                                                                                                                                         }
+                                        </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="saleOverviewBody">
+                                <img src="~/assets/images/SalesOverview.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="saleOverviewSection">
+                            <div class="saleOverviewHeader">
+                                <h2>Active Orders</h2>
+                                <div class="saleOverveiwRightSide">
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                         .a {
+                                                                                                                                             fill: #fff;
+                                                                                                                                         }
+                                        </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="activeOrdertable">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>PATIENT</th>
+                                            <th>Pickup Time</th>
+                                            <th>Rider</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="userNameImg">
+                                                    <img src="~/assets/images/userImg.png" alt="">
+                                                    <p>Jonathan Rhodes <span>Ramdaspeth</span></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="timingButtons">1:00 PM</button>
+                                            </td>
+                                            <td>
+                                                <div class="riderNameSection">
+                                                    <p>Radheshyam T.</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.329" height="17.9" viewBox="0 0 16.329 17.9"><defs><style>
+                                                                                                                                                             .a {
+                                                                                                                                                                 fill: #fff;
+                                                                                                                                                             }
+                                                    </style></defs><path class="a" d="M93.941,107.837c-.989,0-1.7,1.4-1.7,2.749a2.3,2.3,0,0,0,1.232,2.268v5.588a.476.476,0,1,0,.936,0v-5.588a2.3,2.3,0,0,0,1.232-2.268C95.641,109.231,94.924,107.837,93.941,107.837Zm0,3.969c-.45,0-.764-.5-.764-1.221,0-.856.427-1.618.764-1.618s.764.762.764,1.618C94.705,111.3,94.391,111.806,93.941,111.806Z" transform="translate(-90.064 -104.472)"></path><path class="a" d="M22.982,17.9H38.263a.524.524,0,0,0,.524-.524V.524A.524.524,0,0,0,38.263,0H33.081a2.981,2.981,0,0,0-2.458,1.3A2.981,2.981,0,0,0,28.165,0H22.982a.524.524,0,0,0-.524.524V17.375A.524.524,0,0,0,22.982,17.9Zm10.1-16.851h4.658v15.8H31.147V2.982A1.936,1.936,0,0,1,33.081,1.049Zm-9.574,0h4.658A1.936,1.936,0,0,1,30.1,2.982V16.851H23.507Z" transform="translate(-22.458)"></path><path class="a" d="M301.468,105.74h3.075a.468.468,0,0,0,.468-.468V102.2a.468.468,0,0,0-.468-.468h-3.075a.468.468,0,0,0-.468.468v3.075A.468.468,0,0,0,301.468,105.74Zm.468-3.075h2.139V104.8h-2.139Z" transform="translate(-290.554 -98.044)"></path><path class="a" d="M301.468,261.207h3.075a.468.468,0,1,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -251.111)"></path><path class="a" d="M301.468,321.207h3.075a.468.468,0,0,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -308.999)"></path><path class="a" d="M301.468,381.207h3.075a.468.468,0,0,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -366.888)"></path></svg>
+                                                    <button>
+                                                        <img src="~/assets/images/callingButton.svg" alt="">
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="userNameImg">
+                                                    <img src="~/assets/images/userImg.png" alt="">
+                                                    <p>Jonathan Rhodes <span>Ramdaspeth</span></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="timingButtons">1:00 PM</button>
+                                            </td>
+                                            <td>
+                                                <div class="riderNameSection">
+                                                    <p>Radheshyam T.</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.329" height="17.9" viewBox="0 0 16.329 17.9"><defs><style>
+                                                                                                                                                             .a {
+                                                                                                                                                                 fill: #fff;
+                                                                                                                                                             }
+                                                    </style></defs><path class="a" d="M93.941,107.837c-.989,0-1.7,1.4-1.7,2.749a2.3,2.3,0,0,0,1.232,2.268v5.588a.476.476,0,1,0,.936,0v-5.588a2.3,2.3,0,0,0,1.232-2.268C95.641,109.231,94.924,107.837,93.941,107.837Zm0,3.969c-.45,0-.764-.5-.764-1.221,0-.856.427-1.618.764-1.618s.764.762.764,1.618C94.705,111.3,94.391,111.806,93.941,111.806Z" transform="translate(-90.064 -104.472)"></path><path class="a" d="M22.982,17.9H38.263a.524.524,0,0,0,.524-.524V.524A.524.524,0,0,0,38.263,0H33.081a2.981,2.981,0,0,0-2.458,1.3A2.981,2.981,0,0,0,28.165,0H22.982a.524.524,0,0,0-.524.524V17.375A.524.524,0,0,0,22.982,17.9Zm10.1-16.851h4.658v15.8H31.147V2.982A1.936,1.936,0,0,1,33.081,1.049Zm-9.574,0h4.658A1.936,1.936,0,0,1,30.1,2.982V16.851H23.507Z" transform="translate(-22.458)"></path><path class="a" d="M301.468,105.74h3.075a.468.468,0,0,0,.468-.468V102.2a.468.468,0,0,0-.468-.468h-3.075a.468.468,0,0,0-.468.468v3.075A.468.468,0,0,0,301.468,105.74Zm.468-3.075h2.139V104.8h-2.139Z" transform="translate(-290.554 -98.044)"></path><path class="a" d="M301.468,261.207h3.075a.468.468,0,1,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -251.111)"></path><path class="a" d="M301.468,321.207h3.075a.468.468,0,0,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -308.999)"></path><path class="a" d="M301.468,381.207h3.075a.468.468,0,0,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -366.888)"></path></svg>
+                                                    <button>
+                                                        <img src="~/assets/images/callingButton.svg" alt="">
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="userNameImg">
+                                                    <img src="~/assets/images/userImg.png" alt="">
+                                                    <p>Jonathan Rhodes <span>Ramdaspeth</span></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="timingButtons">1:00 PM</button>
+                                            </td>
+                                            <td>
+                                                <div class="riderNameSection">
+                                                    <p>Radheshyam T.</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.329" height="17.9" viewBox="0 0 16.329 17.9"><defs><style>
+                                                                                                                                                             .a {
+                                                                                                                                                                 fill: #fff;
+                                                                                                                                                             }
+                                                    </style></defs><path class="a" d="M93.941,107.837c-.989,0-1.7,1.4-1.7,2.749a2.3,2.3,0,0,0,1.232,2.268v5.588a.476.476,0,1,0,.936,0v-5.588a2.3,2.3,0,0,0,1.232-2.268C95.641,109.231,94.924,107.837,93.941,107.837Zm0,3.969c-.45,0-.764-.5-.764-1.221,0-.856.427-1.618.764-1.618s.764.762.764,1.618C94.705,111.3,94.391,111.806,93.941,111.806Z" transform="translate(-90.064 -104.472)"></path><path class="a" d="M22.982,17.9H38.263a.524.524,0,0,0,.524-.524V.524A.524.524,0,0,0,38.263,0H33.081a2.981,2.981,0,0,0-2.458,1.3A2.981,2.981,0,0,0,28.165,0H22.982a.524.524,0,0,0-.524.524V17.375A.524.524,0,0,0,22.982,17.9Zm10.1-16.851h4.658v15.8H31.147V2.982A1.936,1.936,0,0,1,33.081,1.049Zm-9.574,0h4.658A1.936,1.936,0,0,1,30.1,2.982V16.851H23.507Z" transform="translate(-22.458)"></path><path class="a" d="M301.468,105.74h3.075a.468.468,0,0,0,.468-.468V102.2a.468.468,0,0,0-.468-.468h-3.075a.468.468,0,0,0-.468.468v3.075A.468.468,0,0,0,301.468,105.74Zm.468-3.075h2.139V104.8h-2.139Z" transform="translate(-290.554 -98.044)"></path><path class="a" d="M301.468,261.207h3.075a.468.468,0,1,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -251.111)"></path><path class="a" d="M301.468,321.207h3.075a.468.468,0,0,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -308.999)"></path><path class="a" d="M301.468,381.207h3.075a.468.468,0,0,0,0-.936h-3.075a.468.468,0,1,0,0,.936Z" transform="translate(-290.554 -366.888)"></path></svg>
+                                                    <button>
+                                                        <img src="~/assets/images/callingButton.svg" alt="">
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboardSecondSection">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="saleOverviewSection">
+                                <div class="saleOverviewHeader">
+                                    <h2>Earning Report</h2>
+                                    <div class="saleOverveiwRightSide">
+                                        <select name="" id="">
+                                            <option value="January" selected>January</option>
+                                            <option value="February">February</option>
+                                            <option value="March">March</option>
+                                            <option value="April">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
+                                        </select>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                             .a {
+                                                                                                                                                 fill: #fff;
+                                                                                                                                             }
+                                            </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="earningbodySection">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="earningContentSection">
+                                                <div class="earningProfitSection">
+                                                    <img src="~/assets/images/earningImg01.svg" alt="">
+                                                    <div class="profiteCount">
+                                                        <h2>68%</h2>
+                                                        <span>Profite</span>
+                                                    </div>
+                                                </div>
+                                                <h4>₹2,950</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="earningContentSection">
+                                                <div class="earningProfitSection">
+                                                    <img src="~/assets/images/earningImg02.svg" alt="">
+                                                    <div class="profiteCount">
+                                                        <h2>15%</h2>
+                                                        <span>Loss</span>
+                                                    </div>
+                                                </div>
+                                                <h4>₹435</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="earningWeekDetails">
+                                                <ul>
+                                                    <li>
+                                                        <p>Week 1</p>
+                                                        <span>₹435</span>
+                                                    </li>
+                                                    <li>
+                                                        <p>Week 1</p>
+                                                        <span>₹435</span>
+                                                    </li>
+                                                    <li>
+                                                        <p>Week 1</p>
+                                                        <span>₹435</span>
+                                                    </li>
+                                                    <li>
+                                                        <p>Week 1</p>
+                                                        <span>₹435</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="saleOverviewSection">
+                                <div class="saleOverviewHeader">
+                                    <h2>Order Status</h2>
+                                </div>
+                                <div class="statusOrderBody">
+                                    <p>Click on the labels below to view the respective orders and change their status</p>
+                                    <ul>
+                                        <li>
+                                            <p>Preparing</p>
+                                            <span>10 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                      .a {
+                                                                                                                                                          fill: #fff;
+                                                                                                                                                      }
+                                            </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></span>
+                                        </li>
+                                        <li>
+                                            <p>Preparing</p>
+                                            <span>10 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                      .a {
+                                                                                                                                                          fill: #fff;
+                                                                                                                                                      }
+                                            </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></span>
+                                        </li>
+                                        <li>
+                                            <p>Preparing</p>
+                                            <span>10 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                      .a {
+                                                                                                                                                          fill: #fff;
+                                                                                                                                                      }
+                                            </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="saleOverviewSection ActiveDeliveriesBox">
+                                <div class="saleOverviewHeader">
+                                    <h2>Active Deliveries</h2>
+                                    <div class="saleOverveiwRightSide">
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                             .a {
+                                                                                                                                                 fill: #fff;
+                                                                                                                                             }
+                                            </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ActiveDeliveriesBody">
+                                    <p>15</p>
+                                    <img src="~/assets/images/ActiveDeliveries.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
