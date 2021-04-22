@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using NoHungKitchenWeb.Data;
+using System.IO;
+using System.Net;
+using System.Text;
 
 namespace NoHungKitchenWeb.Models
 {
@@ -26,5 +30,93 @@ namespace NoHungKitchenWeb.Models
         public string ExpiryDateOfLicense { get; set; }
         public string PanCardNo { get; set; }
         public string GSTRegNo { get; set; }
+
+        public string SaveRegistration(HttpPostedFileBase fb, RegistrationModel model)
+        {
+            string Message = "";
+            NoHungKitchenWebEntities db = new NoHungKitchenWebEntities();
+            string filePath = "";
+            string fileName = "";
+            string sysFileName = "";
+
+
+            if (fb != null && fb.ContentLength > 0)
+            {
+                filePath = HttpContext.Current.Server.MapPath("~/Content/images/Kitchen/");
+                //filePath = HttpContext.Current.Server.MapPath("~/Content/documetns/Kitchendocuments/");
+                DirectoryInfo di = new DirectoryInfo(filePath);
+                if (!di.Exists)
+                {
+                    di.Create();
+                }
+                fileName = fb.FileName;
+                sysFileName = DateTime.Now.ToFileTime().ToString() + Path.GetExtension(fb.FileName);
+                fb.SaveAs(filePath + "//" + sysFileName);
+                if (!string.IsNullOrWhiteSpace(fb.FileName))
+                {
+                    string afileName = HttpContext.Current.Server.MapPath("~/Content/images/Kitchen/") + "/" + sysFileName;
+                    //string afileName = HttpContext.Current.Server.MapPath("~/Content/documents/Kitchendocuments/") + "/" + sysFileName;
+
+                }
+            }
+            var saveregistration = new tblKitchenMaster()
+            {
+                KitchenName = model.KitchenName,
+                Mobile = model.Mobile,
+                Email = model.Email,
+                State = model.State,
+                City = model.City,
+                Pin = model.Pin,
+                Address = model.Address,
+                OwnerName = model.OwnerName,
+                Password = model.Password,
+                UploadDocuments = model.UploadDocuments,
+                KitchenImage = sysFileName,
+                ContactPerson = model.ContactPerson,
+                ContactPersonRole = model.ContactPersonRole,
+                KitchenContactNo = model.KitchenContactNo,
+                FSSAILicenseNo = model.FSSAILicenseNo,
+                ExpiryDateOfLicense = model.ExpiryDateOfLicense,
+                PanCardNo = model.PanCardNo,
+                GSTRegNo = model.GSTRegNo,
+
+            };
+            db.tblKitchenMasters.Add(saveregistration);
+            db.SaveChanges();
+            string mobile = model.Mobile;
+            string sAPIKey = "fYMsEmpZQUewatTPf0TktQ";
+            string sNumber = mobile;
+            string sMessage = "Hi, " + model.OwnerName + " Welcome NoHung. KitchenId: " + saveregistration.KitchenId + " & Password: " + model.Password + " - NoHung";
+            string sSenderId = "BSCAKE";
+            string sChannel = "trans";
+            string sRoute = "8";
+            // string sURL = "http://mysms.msg24.in/api/mt/SendSMS?APIKEY=" + sAPIKey + "&senderid=" + sSenderId + "&channel=" + sChannel + "&DCS=0&flashsms=0&number=" + sNumber + "&text=" + sMessage + "&route=" + sRoute + "";
+            string sURL = "http://mysms.msg24.in/api/mt/SendSMS?APIKEY=" + sAPIKey + "&senderid=" + sSenderId + "&channel=" + sChannel + "&DCS=0&flashsms=0&number=" + sNumber + "&text=" + sMessage + "&route=" + sRoute + "";
+
+            string sResponse = GetResponse(sURL);
+            //Response.Write(sResponse);
+            return Message;
+        }
+        public static string GetResponse(string sUrl)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(sUrl);
+            request.MaximumAutomaticRedirections = 4;
+            request.Credentials = CredentialCache.DefaultCredentials;
+            try
+            {
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                Stream receiveStream = response.GetResponseStream();
+                StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+                string sResponse = readStream.ReadToEnd();
+                response.Close();
+                readStream.Close();
+                return sResponse;
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+        }
     }
 }
+
