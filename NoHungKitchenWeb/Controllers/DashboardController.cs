@@ -11,6 +11,7 @@ namespace NoHungKitchenWeb.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
+            ViewBag.KitchenName = Session["KitchenName"];
             return View();
         }
     }

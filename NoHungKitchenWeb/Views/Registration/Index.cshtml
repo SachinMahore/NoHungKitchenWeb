@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="~/assets/css/animate.css">
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/assets/css/style.css">
+
+    <script src="~/Content/Pages/KitchenRegistration.js"></script>
+
     <title>Login | NOHUNG KITCHEN</title>
 </head>
 <div class="loginBackground">
@@ -29,36 +32,129 @@
                 <div class="loginHeading">
                     <h2>LOGIN</h2>
                 </div>
-                <div class="formContents">
+                <div class="formContents" style="height:400px;overflow-y:scroll; overflow-x:hidden;">
                     <h4>Please provide basic details:</h4>
                     <div class="form-group">
-                        <input type="text" id="KitchenName" autocomplete="off" class="form-control">
+                        <input type="text" id="txtKitchenName" autocomplete="off" class="form-control">
                         <label for="KitchenName">Kitchen Name</label>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" id="KitchenAddress" autocomplete="off" class="form-control">
-                        <label for="KitchenAddress">Kitchen Address</label>
+                        <input type="text" id="txtMobile" autocomplete="off" class="form-control">
+                        <label for="Mobile">Mobile</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtEmail" autocomplete="off" class="form-control">
+                        <label for="EmailId">Email-Id</label>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" id="City" autocomplete="off" class="form-control">
-                        <label for="City">City</label>
+
+                        <select class="form-control" id="ddlState" name="State">
+                            <option>Select a State</option>
+                            <option>Maharashtra</option>
+                            <option>Telangana</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <select class="form-control" id="ddlCity" name="City">
+                            <option>Select a City</option>
+                            <option>Nagpur</option>
+                            <option>Pune</option>
+                            <option>Mumbai</option>
+                            <option>Hyderabad</option>
+                        </select>
+
                     </div>
 
                     <div class="form-group">
-                        <input type="text" id="State" autocomplete="off" class="form-control">
-                        <label for="State">State</label>
+                        <input type="text" id="txtPin" autocomplete="off" class="form-control">
+                        <label for="Pin">EnterPin</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="txtAddress" autocomplete="off" class="form-control">
+                        <label for="Address">Address</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="txtOwnerName" autocomplete="off" class="form-control">
+                        <label for="OwnerName">OwnerName</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="txtPassword" autocomplete="off" class="form-control">
+                        <label for="Password">Password</label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input id="FUDocument" type="file" />
+                        <label for="UploadDocuments">UploadDocuments</label>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <input id="FUKitchen" type="file" />
+                        <label for="FUKitchen">KitchenImage</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="txtContactPerson" autocomplete="off" class="form-control">
+                        <label for="ContactPerson">ContactPerson</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="txtContactPersonRole" autocomplete="off" class="form-control">
+                        <label for="ContactPersonRole">ContactPersonRole</label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="text" id="txtKitchenContactNo" autocomplete="off" class="form-control">
+                        <label for="KitchenContactNo">KitchenContactNo</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="txtFSSAILicenseNo" autocomplete="off" class="form-control">
+                        <label for="FSSAILicenseNo">FSSAILicenseNo</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="date" id="txtExpiryDateOfLicense" autocomplete="off" class="form-control">
+                        <label for="ExpiryDateOfLicense">ExpiryDateOfLicense</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="txtPanCardNo" autocomplete="off" class="form-control">
+                        <label for="PanCardNo">PanCardNo</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="txtGSTRegNo" autocomplete="off" class="form-control">
+                        <label for="GSTRegNo">GSTRegNo</label>
                     </div>
 
                     <div class="form-group loginbuttonsSections">
                         <a style="visibility: hidden;" href="" class="forgotPasswordText">Forgot Password?</a>
-                        <a href="" class="loginButton">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>                                                                                                 }
-                            </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)" /></svg>
-                        </a>
+                        <input type="button" value="Submit" a href="" class="loginButton" onclick="saveregistration()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5">
+                            <defs>
+                                <style>
+                                </style>
+                            </defs>
+                            <path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)" />
+                        </svg>
+                        </input>
                     </div>
                 </div>
+
 
                 <div class="dontHaveAccount">
                     <p>Already having an account yet? <a href="~/Login">SIGN IN NOW</a></p>
