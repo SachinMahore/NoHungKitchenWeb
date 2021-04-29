@@ -17,6 +17,7 @@ namespace NoHungKitchenWeb.Data
         public long OMId { get; set; }
         public long OrderId { get; set; }
         public long MenuId { get; set; }
+        public int Qty { get; set; }
         public string Price { get; set; }
         public string Discount { get; set; }
         public string Tax { get; set; }

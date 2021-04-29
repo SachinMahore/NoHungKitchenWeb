@@ -59,42 +59,51 @@ namespace NoHungKitchenWeb.Models
 
                 }
             }
-            var saveregistration = new tblKitchenMaster()
+            var getKitchen = db.tblKitchenMasters.Where(p => p.KitchenName == model.KitchenName).FirstOrDefault();
+            if (getKitchen == null)
             {
-                KitchenName = model.KitchenName,
-                Mobile = model.Mobile,
-                Email = model.Email,
-                State = model.State,
-                City = model.City,
-                Pin = model.Pin,
-                Address = model.Address,
-                OwnerName = model.OwnerName,
-                Password = model.Password,
-                UploadDocuments = model.UploadDocuments,
-                KitchenImage = sysFileName,
-                ContactPerson = model.ContactPerson,
-                ContactPersonRole = model.ContactPersonRole,
-                KitchenContactNo = model.KitchenContactNo,
-                FSSAILicenseNo = model.FSSAILicenseNo,
-                ExpiryDateOfLicense = model.ExpiryDateOfLicense,
-                PanCardNo = model.PanCardNo,
-                GSTRegNo = model.GSTRegNo,
+                var saveregistration = new tblKitchenMaster()
+                {
+                    KitchenName = model.KitchenName,
+                    Mobile = model.Mobile,
+                    Email = model.Email,
+                    State = model.State,
+                    City = model.City,
+                    Pin = model.Pin,
+                    Address = model.Address,
+                    OwnerName = model.OwnerName,
+                    Password = model.Password,
+                    UploadDocuments = model.UploadDocuments,
+                    KitchenImage = sysFileName,
+                    ContactPerson = model.ContactPerson,
+                    ContactPersonRole = model.ContactPersonRole,
+                    KitchenContactNo = model.KitchenContactNo,
+                    FSSAILicenseNo = model.FSSAILicenseNo,
+                    ExpiryDateOfLicense = model.ExpiryDateOfLicense,
+                    PanCardNo = model.PanCardNo,
+                    GSTRegNo = model.GSTRegNo,
 
-            };
-            db.tblKitchenMasters.Add(saveregistration);
-            db.SaveChanges();
-            string mobile = model.Mobile;
-            string sAPIKey = "fYMsEmpZQUewatTPf0TktQ";
-            string sNumber = mobile;
-            string sMessage = "Hi, " + model.OwnerName + " Welcome NoHung. KitchenId: " + saveregistration.KitchenId + " & Password: " + model.Password + " - NoHung";
-            string sSenderId = "BSCAKE";
-            string sChannel = "trans";
-            string sRoute = "8";
-            // string sURL = "http://mysms.msg24.in/api/mt/SendSMS?APIKEY=" + sAPIKey + "&senderid=" + sSenderId + "&channel=" + sChannel + "&DCS=0&flashsms=0&number=" + sNumber + "&text=" + sMessage + "&route=" + sRoute + "";
-            string sURL = "http://mysms.msg24.in/api/mt/SendSMS?APIKEY=" + sAPIKey + "&senderid=" + sSenderId + "&channel=" + sChannel + "&DCS=0&flashsms=0&number=" + sNumber + "&text=" + sMessage + "&route=" + sRoute + "";
+                };
+                db.tblKitchenMasters.Add(saveregistration);
+                db.SaveChanges();
+                string mobile = model.Mobile;
+                string sAPIKey = "fYMsEmpZQUewatTPf0TktQ";
+                string sNumber = mobile;
+                string sMessage = "Hi, " + model.OwnerName + "- NoHung KitchenId: " + saveregistration.KitchenId + " & Pass: " + model.Password ;
+                string sSenderId = "BSCAKE";
+                string sChannel = "trans";
+                string sRoute = "8";
+                // string sURL = "http://mysms.msg24.in/api/mt/SendSMS?APIKEY=" + sAPIKey + "&senderid=" + sSenderId + "&channel=" + sChannel + "&DCS=0&flashsms=0&number=" + sNumber + "&text=" + sMessage + "&route=" + sRoute + "";
+                string sURL = "http://mysms.msg24.in/api/mt/SendSMS?APIKEY=" + sAPIKey + "&senderid=" + sSenderId + "&channel=" + sChannel + "&DCS=0&flashsms=0&number=" + sNumber + "&text=" + sMessage + "&route=" + sRoute + "";
 
-            string sResponse = GetResponse(sURL);
-            //Response.Write(sResponse);
+                string sResponse = GetResponse(sURL);
+                //Response.Write(sResponse);
+                Message = model.KitchenName + " Kitchen added Successfully with KitchenId: " + saveregistration.KitchenId;
+            }
+            else
+            {
+                Message = model.KitchenName + " Kitchen Name already exist.";
+            }
             return Message;
         }
         public static string GetResponse(string sUrl)

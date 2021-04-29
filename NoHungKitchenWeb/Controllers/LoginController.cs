@@ -47,6 +47,7 @@ namespace NoHungKitchenWeb.Controllers
         {
             if (Session["KitchenId"] != null)
             {
+                ViewBag.KitchenId = Session["KitchenId"];
                 ViewBag.KitchenName = Session["KitchenName"];
                 ViewBag.OwnerName = Session["OwnerName"];
                 ViewBag.KitchenImage = Session["KitchenImage"];

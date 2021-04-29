@@ -17,7 +17,8 @@ namespace NoHungKitchenWeb.Data
         public long OrderId { get; set; }
         public int CustomerId { get; set; }
         public int KitchenId { get; set; }
-        public int RiderId { get; set; }
+        public int PackageId { get; set; }
+        public Nullable<int> RiderId { get; set; }
         public System.DateTime OrderDate { get; set; }
         public string DeliveryTime { get; set; }
         public string State { get; set; }
@@ -29,5 +30,7 @@ namespace NoHungKitchenWeb.Data
         public string Tax { get; set; }
         public string Discount { get; set; }
         public string PaidAmount { get; set; }
+        public Nullable<int> IsSaturday { get; set; }
+        public Nullable<int> IsSunday { get; set; }
     }
 }

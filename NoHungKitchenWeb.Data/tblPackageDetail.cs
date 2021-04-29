@@ -17,6 +17,9 @@ namespace NoHungKitchenWeb.Data
         public int PackageDetId { get; set; }
         public int PackageId { get; set; }
         public string PackageDay { get; set; }
-        public int MenuId { get; set; }
+        public string MenuIds { get; set; }
+        public Nullable<decimal> PackageRate { get; set; }
+        public string PackagePhoto { get; set; }
+        public Nullable<int> DefaultMenuId { get; set; }
     }
 }

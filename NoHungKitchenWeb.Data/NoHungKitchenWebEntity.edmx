@@ -4,20 +4,20 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NoHungKitchenWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="NoHungKitchenWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblKitchenMaster">
           <Key>
             <PropertyRef Name="KitchenId" />
           </Key>
           <Property Name="KitchenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="KitchenName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="KitchenName" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="Mobile" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Pin" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Address" Type="nvarchar" MaxLength="500" />
-          <Property Name="OwnerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="UploadDocuments" Type="nvarchar" MaxLength="500" />
           <Property Name="KitchenImage" Type="nvarchar" MaxLength="500" />
@@ -50,7 +50,8 @@
           <Property Name="OrderId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerId" Type="int" Nullable="false" />
           <Property Name="KitchenId" Type="int" Nullable="false" />
-          <Property Name="RiderId" Type="int" Nullable="false" />
+          <Property Name="PackageId" Type="int" Nullable="false" />
+          <Property Name="RiderId" Type="int" />
           <Property Name="OrderDate" Type="date" Nullable="false" />
           <Property Name="DeliveryTime" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -62,6 +63,8 @@
           <Property Name="Tax" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Discount" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PaidAmount" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsSaturday" Type="int" />
+          <Property Name="IsSunday" Type="int" />
         </EntityType>
         <EntityType Name="tblOrderMenu">
           <Key>
@@ -70,6 +73,7 @@
           <Property Name="OMId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderId" Type="bigint" Nullable="false" />
           <Property Name="MenuId" Type="bigint" Nullable="false" />
+          <Property Name="Qty" Type="int" Nullable="false" />
           <Property Name="Price" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Discount" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Tax" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -81,6 +85,13 @@
           <Property Name="PackageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="KitchenId" Type="int" Nullable="false" />
           <Property Name="Category" Type="int" Nullable="false" />
+          <Property Name="Cuisine" Type="int" Nullable="false" />
+          <Property Name="PlanType" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="IsSaturday" Type="int" />
+          <Property Name="IsSunday" Type="int" />
+          <Property Name="ActualWeeklyRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ActualMonthlyRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="WeeklyRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="MonthlyRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Status" Type="int" Nullable="false" />
@@ -92,7 +103,10 @@
           <Property Name="PackageDetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PackageId" Type="int" Nullable="false" />
           <Property Name="PackageDay" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="MenuId" Type="int" Nullable="false" />
+          <Property Name="MenuIds" Type="nvarchar" MaxLength="100" />
+          <Property Name="PackageRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PackagePhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="DefaultMenuId" Type="int" />
         </EntityType>
         <EntityType Name="tblRider">
           <Key>
@@ -120,8 +134,7 @@
           <EntitySet Name="tblPackageDetails" EntityType="Self.tblPackageDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblRider" EntityType="Self.tblRider" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NoHungKitchenWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -130,14 +143,14 @@
             <PropertyRef Name="KitchenId" />
           </Key>
           <Property Name="KitchenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KitchenName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="KitchenName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="OwnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OwnerName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UploadDocuments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="KitchenImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
@@ -163,57 +176,6 @@
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MenuPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="tblOrder">
-          <Key>
-            <PropertyRef Name="OrderId" />
-          </Key>
-          <Property Name="OrderId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CustomerId" Type="Int32" Nullable="false" />
-          <Property Name="KitchenId" Type="Int32" Nullable="false" />
-          <Property Name="RiderId" Type="Int32" Nullable="false" />
-          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DeliveryTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GoogleAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TotalAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Tax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Discount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PaidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tblOrderMenu">
-          <Key>
-            <PropertyRef Name="OMId" />
-          </Key>
-          <Property Name="OMId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="OrderId" Type="Int64" Nullable="false" />
-          <Property Name="MenuId" Type="Int64" Nullable="false" />
-          <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Discount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Tax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tblPackage">
-          <Key>
-            <PropertyRef Name="PackageID" />
-          </Key>
-          <Property Name="PackageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KitchenId" Type="Int32" Nullable="false" />
-          <Property Name="Category" Type="Int32" Nullable="false" />
-          <Property Name="WeeklyRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="MonthlyRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="Status" Type="Int32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tblPackageDetail">
-          <Key>
-            <PropertyRef Name="PackageDetId" />
-          </Key>
-          <Property Name="PackageDetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PackageId" Type="Int32" Nullable="false" />
-          <Property Name="PackageDay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MenuId" Type="Int32" Nullable="false" />
-        </EntityType>
         <EntityType Name="tblRider">
           <Key>
             <PropertyRef Name="RiderId" />
@@ -234,12 +196,77 @@
         <EntityContainer Name="NoHungKitchenWebEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblKitchenMasters" EntityType="Self.tblKitchenMaster" />
           <EntitySet Name="tblMenus" EntityType="Self.tblMenu" />
-          <EntitySet Name="tblOrders" EntityType="Self.tblOrder" />
-          <EntitySet Name="tblOrderMenus" EntityType="Self.tblOrderMenu" />
-          <EntitySet Name="tblPackages" EntityType="Self.tblPackage" />
-          <EntitySet Name="tblPackageDetails" EntityType="Self.tblPackageDetail" />
           <EntitySet Name="tblRiders" EntityType="Self.tblRider" />
+          <EntitySet Name="tblPackages" EntityType="NoHungKitchenWebModel.tblPackage" />
+          <EntitySet Name="tblPackageDetails" EntityType="NoHungKitchenWebModel.tblPackageDetail" />
+          <EntitySet Name="tblOrders" EntityType="NoHungKitchenWebModel.tblOrder" />
+          <EntitySet Name="tblOrderMenus" EntityType="NoHungKitchenWebModel.tblOrderMenu" />
         </EntityContainer>
+        <EntityType Name="tblPackage">
+          <Key>
+            <PropertyRef Name="PackageID" />
+          </Key>
+          <Property Name="PackageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KitchenId" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="Int32" Nullable="false" />
+          <Property Name="Cuisine" Type="Int32" Nullable="false" />
+          <Property Name="PlanType" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="IsSaturday" Type="Int32" />
+          <Property Name="IsSunday" Type="Int32" />
+          <Property Name="ActualWeeklyRate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ActualMonthlyRate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="WeeklyRate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="MonthlyRate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblPackageDetail">
+          <Key>
+            <PropertyRef Name="PackageDetId" />
+          </Key>
+          <Property Name="PackageDetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PackageId" Type="Int32" Nullable="false" />
+          <Property Name="PackageDay" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MenuIds" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PackageRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PackagePhoto" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultMenuId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblOrder">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="KitchenId" Type="Int32" Nullable="false" />
+          <Property Name="PackageId" Type="Int32" Nullable="false" />
+          <Property Name="RiderId" Type="Int32" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DeliveryTime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GoogleAddress" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TotalAmount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tax" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Discount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaidAmount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsSaturday" Type="Int32" />
+          <Property Name="IsSunday" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblOrderMenu">
+          <Key>
+            <PropertyRef Name="OMId" />
+          </Key>
+          <Property Name="OMId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int64" Nullable="false" />
+          <Property Name="MenuId" Type="Int64" Nullable="false" />
+          <Property Name="Qty" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Discount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tax" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -286,61 +313,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tblOrders">
-            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblOrder">
-              <MappingFragment StoreEntitySet="tblOrder">
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
-                <ScalarProperty Name="RiderId" ColumnName="RiderId" />
-                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
-                <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Pin" ColumnName="Pin" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
-                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
-                <ScalarProperty Name="Tax" ColumnName="Tax" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-                <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblOrderMenus">
-            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblOrderMenu">
-              <MappingFragment StoreEntitySet="tblOrderMenu">
-                <ScalarProperty Name="OMId" ColumnName="OMId" />
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-                <ScalarProperty Name="Tax" ColumnName="Tax" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblPackages">
-            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblPackage">
-              <MappingFragment StoreEntitySet="tblPackage">
-                <ScalarProperty Name="PackageID" ColumnName="PackageID" />
-                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
-                <ScalarProperty Name="Category" ColumnName="Category" />
-                <ScalarProperty Name="WeeklyRate" ColumnName="WeeklyRate" />
-                <ScalarProperty Name="MonthlyRate" ColumnName="MonthlyRate" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblPackageDetails">
-            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblPackageDetail">
-              <MappingFragment StoreEntitySet="tblPackageDetails">
-                <ScalarProperty Name="PackageDetId" ColumnName="PackageDetId" />
-                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
-                <ScalarProperty Name="PackageDay" ColumnName="PackageDay" />
-                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblRiders">
             <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblRider">
               <MappingFragment StoreEntitySet="tblRider">
@@ -356,6 +328,75 @@
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="BikeNumber" ColumnName="BikeNumber" />
                 <ScalarProperty Name="BikeType" ColumnName="BikeType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPackages">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblPackage">
+              <MappingFragment StoreEntitySet="tblPackage">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MonthlyRate" ColumnName="MonthlyRate" />
+                <ScalarProperty Name="WeeklyRate" ColumnName="WeeklyRate" />
+                <ScalarProperty Name="ActualMonthlyRate" ColumnName="ActualMonthlyRate" />
+                <ScalarProperty Name="ActualWeeklyRate" ColumnName="ActualWeeklyRate" />
+                <ScalarProperty Name="IsSunday" ColumnName="IsSunday" />
+                <ScalarProperty Name="IsSaturday" ColumnName="IsSaturday" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="Cuisine" ColumnName="Cuisine" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
+                <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPackageDetails">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblPackageDetail">
+              <MappingFragment StoreEntitySet="tblPackageDetails">
+                <ScalarProperty Name="DefaultMenuId" ColumnName="DefaultMenuId" />
+                <ScalarProperty Name="PackagePhoto" ColumnName="PackagePhoto" />
+                <ScalarProperty Name="PackageRate" ColumnName="PackageRate" />
+                <ScalarProperty Name="MenuIds" ColumnName="MenuIds" />
+                <ScalarProperty Name="PackageDay" ColumnName="PackageDay" />
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="PackageDetId" ColumnName="PackageDetId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOrders">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblOrder">
+              <MappingFragment StoreEntitySet="tblOrder">
+                <ScalarProperty Name="IsSunday" ColumnName="IsSunday" />
+                <ScalarProperty Name="IsSaturday" ColumnName="IsSaturday" />
+                <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="RiderId" ColumnName="RiderId" />
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOrderMenus">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblOrderMenu">
+              <MappingFragment StoreEntitySet="tblOrderMenu">
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="OMId" ColumnName="OMId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -17,6 +17,13 @@ namespace NoHungKitchenWeb.Data
         public int PackageID { get; set; }
         public int KitchenId { get; set; }
         public int Category { get; set; }
+        public int Cuisine { get; set; }
+        public int PlanType { get; set; }
+        public Nullable<System.DateTime> StartDate { get; set; }
+        public Nullable<int> IsSaturday { get; set; }
+        public Nullable<int> IsSunday { get; set; }
+        public decimal ActualWeeklyRate { get; set; }
+        public decimal ActualMonthlyRate { get; set; }
         public decimal WeeklyRate { get; set; }
         public decimal MonthlyRate { get; set; }
         public int Status { get; set; }

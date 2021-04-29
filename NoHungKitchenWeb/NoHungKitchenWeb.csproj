@@ -130,10 +130,18 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\OfferController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PackageController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\MenuModel.cs" />
+    <Compile Include="Models\OfferModel.cs" />
+    <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\PackageModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -185,7 +193,31 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\jquery-confirm-master\animations.html" />
+    <Content Include="Content\jquery-confirm-master\callback.html" />
+    <Content Include="Content\jquery-confirm-master\css\jquery-confirm.css" />
+    <Content Include="Content\jquery-confirm-master\demo\demo.css" />
+    <Content Include="Content\jquery-confirm-master\demo\demo.js" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\bundled.css" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\bundled.js" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\jquery-confirm-master\demo\logo-name.svg" />
+    <Content Include="Content\jquery-confirm-master\dist\jquery-confirm.min.css" />
+    <Content Include="Content\jquery-confirm-master\dist\jquery-confirm.min.js" />
+    <Content Include="Content\jquery-confirm-master\form.html" />
+    <Content Include="Content\jquery-confirm-master\index.html" />
+    <Content Include="Content\jquery-confirm-master\jquery-confirm.png" />
+    <Content Include="Content\jquery-confirm-master\js\jquery-confirm.js" />
+    <Content Include="Content\jquery-confirm-master\table.html" />
+    <Content Include="Content\jquery-confirm-master\text.txt" />
+    <Content Include="Content\jquery-confirm-master\themelayout.png" />
+    <Content Include="Content\jquery-confirm-master\themes.html" />
     <Content Include="Content\Pages\KitchenRegistration.js" />
+    <Content Include="Content\Pages\Menu.js" />
+    <Content Include="Content\Pages\Offer.js" />
+    <Content Include="Content\Pages\Order.js" />
+    <Content Include="Content\Pages\Package.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -194,6 +226,18 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="assets\css\style.css.map" />
     <Content Include="assets\css\style.scss" />
+    <Content Include="Content\jquery-confirm-master\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Content\jquery-confirm-master\.gitignore" />
+    <Content Include="Content\jquery-confirm-master\bower.json" />
+    <Content Include="Content\jquery-confirm-master\css\jquery-confirm.less" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\jquery-confirm-master\demo\libs\fonts\FontAwesome.otf" />
+    <Content Include="Content\jquery-confirm-master\LICENSE" />
+    <Content Include="Content\jquery-confirm-master\package.json" />
+    <Content Include="Content\jquery-confirm-master\README.md" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -222,10 +266,16 @@
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Registration\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\Master.cshtml" />
+    <Content Include="Views\Package\Index.cshtml" />
+    <Content Include="Views\Offer\Index.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\Kitchen\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

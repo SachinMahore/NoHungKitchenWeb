@@ -221,6 +221,9 @@ body {
   height: auto;
   position: relative;
   display: flex;
+  /* width */
+  /* Track */
+  /* Handle on hover */
 }
 .outerSectionLayout .leftSideSection {
   position: fixed;
@@ -244,8 +247,13 @@ body {
   width: 100%;
   max-width: 141px;
 }
+.outerSectionLayout .leftSideSection .dashboardLogoSection .CookCap {
+  display: none;
+}
 .outerSectionLayout .leftSideSection .dashbaordMenu {
   position: relative;
+  height: calc(100% - 180px);
+  overflow: auto;
 }
 .outerSectionLayout .leftSideSection .dashbaordMenu ul {
   list-style: none;
@@ -280,6 +288,37 @@ body {
   background-color: #EF7B13;
   transition: all 0.5s ease;
 }
+.outerSectionLayout .leftSideSection .logoutSection {
+  text-align: center;
+  position: relative;
+}
+.outerSectionLayout .leftSideSection .logoutSection a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background-color: #FFFFFF;
+  padding: 4px 25px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.outerSectionLayout .leftSideSection .logoutSection a img {
+  margin-right: 6px;
+  width: 16px;
+}
+.outerSectionLayout .leftSideSection .logoutSection a span {
+  color: #4d4d4d;
+  font-size: 14px;
+}
+.outerSectionLayout .dashbaordMenu::-webkit-scrollbar {
+  width: 6px;
+}
+.outerSectionLayout .dashbaordMenu::-webkit-scrollbar-track {
+  background: #b1b1b1;
+}
+.outerSectionLayout .dashbaordMenu::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
+}
 .outerSectionLayout .rightSideSection {
   position: relative;
   margin-left: 240px;
@@ -306,6 +345,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+}
+@media (max-width: 767px) {
+  .outerSectionLayout .rightSideSection .dashbaordHeaderSection {
+    padding: 0 10px;
+  }
 }
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside {
   position: relative;
@@ -336,6 +380,11 @@ body {
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox {
   position: relative;
   width: 250px;
+}
+@media (max-width: 767px) {
+  .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox {
+    display: none;
+  }
 }
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderLeftside .headerSearchBox form {
   width: 100%;
@@ -398,6 +447,11 @@ body {
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button svg .a {
   fill: #FFFFFF;
   transition: all 0.5s ease;
+}
+@media (max-width: 480px) {
+  .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button span {
+    display: none;
+  }
 }
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerAddMenuButton button:focus {
   box-shadow: none;
@@ -465,6 +519,11 @@ body {
   margin-right: 10px;
   box-shadow: 0px 5px 20px #00000029;
 }
+@media (max-width: 1200px) {
+  .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userImgSection {
+    border-radius: 50%;
+  }
+}
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userImgSection img {
   width: 100%;
   height: 100%;
@@ -472,6 +531,11 @@ body {
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userInformSection {
   position: relative;
   text-align: left;
+}
+@media (max-width: 1200px) {
+  .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userInformSection {
+    display: none;
+  }
 }
 .outerSectionLayout .rightSideSection .dashbaordHeaderSection .dashboardHeaderRightSide .headerUserName button .userInformSection h4 {
   font-size: 15px;
@@ -487,6 +551,11 @@ body {
 .outerSectionLayout .rightSideSection .dashbaordLayout {
   padding: 120px 30px 30px 30px;
   position: relative;
+}
+@media (max-width: 1200px) {
+  .outerSectionLayout .rightSideSection .dashbaordLayout {
+    padding: 120px 30px 0px 30px;
+  }
 }
 .outerSectionLayout .rightSideSection .dashbaordLayout .commonHeading {
   position: relative;
@@ -508,6 +577,11 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 140px;
+}
+@media (max-width: 1200px) {
+  .outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard {
+    margin-bottom: 30px;
+  }
 }
 .outerSectionLayout .rightSideSection .dashbaordLayout .dashboardCard .activeOrderSection {
   position: relative;
@@ -1709,6 +1783,421 @@ body {
   margin: 0 auto;
   text-align: center;
   font-weight: bold;
+}
+
+.packageLunchSection {
+  position: relative;
+  background-color: #FFFFFF;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.packageLunchSection .lunchHeadingSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.packageLunchSection .lunchHeadingSection h2 {
+  font-size: 18px;
+  color: #2F3443;
+  margin: 0;
+}
+.packageLunchSection .lunchHeadingSection .foodNameSeciton {
+  position: relative;
+}
+.packageLunchSection .lunchHeadingSection .foodNameSeciton p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: #CE543D;
+  font-size: 14px;
+  font-weight: 600;
+}
+.packageLunchSection .lunchHeadingSection .foodNameSeciton p img {
+  margin-right: 5px;
+}
+
+.foodsTableSection {
+  position: relative;
+  width: 100%;
+}
+.foodsTableSection .table {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+}
+.foodsTableSection .table tr {
+  margin-bottom: 10px;
+}
+.foodsTableSection .table tr td {
+  border: none;
+  vertical-align: middle;
+}
+.foodsTableSection .table tr td .foodsDayName {
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.foodsTableSection .table tr td .foodsDayName p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.foodsTableSection .table tr td:nth-child(2) p, .foodsTableSection .table tr td:nth-child(3) p {
+  background-color: #F1F1F1;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 0;
+}
+.foodsTableSection .table tr td:nth-child(2) p {
+  color: #CE543D;
+}
+.foodsTableSection .table tr td a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #FFA451;
+}
+.foodsTableSection .table tr td a svg {
+  fill: #FFFFFF;
+  width: 20px;
+}
+.foodsTableSection .table tr td a:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.LunchTypeSection {
+  background-color: #FFFFFF;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.LunchTypeSection .typeLunchContent {
+  padding: 30px 20px;
+  background-color: #FCA896;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.LunchTypeSection .typeLunchContent p {
+  margin: 0;
+  color: #FFFFFF;
+}
+.LunchTypeSection .typeLunchContent p img {
+  margin-right: 7px;
+}
+.LunchTypeSection .LunchDateSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.LunchTypeSection .LunchDateSection p {
+  margin: 0;
+  font-size: 16px;
+  color: #4d4d4d;
+}
+.LunchTypeSection .LunchDateSection p img {
+  margin-right: 6px;
+}
+
+.CreatePackageSection {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.CreatePackageSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.CreatePackageSection ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.CreatePackageSection ul li:first-child {
+  border-bottom: solid 1px #f1f1f1;
+}
+.CreatePackageSection ul li .weeklyPackage {
+  position: relative;
+}
+.CreatePackageSection ul li .weeklyPackage p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #7EDABF;
+}
+.CreatePackageSection ul li .weeklyPackage span {
+  font-size: 16px;
+  color: #4d4d4d;
+}
+.CreatePackageSection ul li .weeklyPricingSection {
+  position: relative;
+}
+.CreatePackageSection ul li .weeklyPricingSection h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFA451;
+  margin: 0;
+}
+.CreatePackageSection ul li .weeklyPricingSection p {
+  background-color: #f1f1f1;
+  font-size: 18px;
+  margin: 0;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+.CreatePackageSection ul li .weeklyVariationSection {
+  position: relative;
+}
+.CreatePackageSection ul li .weeklyVariationSection span {
+  font-size: 14px;
+  color: #4d4d4d;
+}
+.CreatePackageSection ul li .weeklyVariationSection h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.CreatePackageSection ul li img {
+  width: 100%;
+  max-width: 50%;
+}
+.CreatePackageSection ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 8px 20px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.foodsFooterImg {
+  position: relative;
+}
+.foodsFooterImg img {
+  width: 100%;
+}
+
+.verticalTabSection {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+.verticalTabSection .tabVerticalContents {
+  position: relative;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  position: sticky;
+  top: 100px;
+}
+.verticalTabSection .tabVerticalContents span {
+  display: block;
+  font-size: 14px;
+  color: #555555;
+  padding: 10px 20px;
+}
+.verticalTabSection .tabVerticalContents .nav.nav-pills {
+  position: relative;
+}
+.verticalTabSection .tabVerticalContents .nav.nav-pills .nav-item a {
+  padding: 12px 20px;
+  color: #4d4d4d;
+}
+.verticalTabSection .tabVerticalContents .nav.nav-pills .nav-item a.active {
+  background-color: #FCA896;
+  color: #FFFFFF;
+}
+.verticalTabSection .tab-content {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.verticalTabSection .tab-content .nav.nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.verticalTabSection .tab-content .nav.nav-tabs li {
+  border: none;
+}
+.verticalTabSection .tab-content .nav.nav-tabs li a {
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 5px solid transparent;
+  color: #2F3443;
+  opacity: 0.5;
+  border: none;
+}
+.verticalTabSection .tab-content .nav.nav-tabs li a:hover {
+  border: none;
+}
+.verticalTabSection .tab-content .nav.nav-tabs li a.active {
+  border: none;
+  color: #7EDABF;
+  border-bottom: 5px solid #7EDABF;
+}
+.verticalTabSection .tab-content .tab-content {
+  box-shadow: none;
+}
+.verticalTabSection .tab-content .tab-content .tab-pane {
+  border: none;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent {
+  position: relative;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .vegAndNon_veg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .vegAndNon_veg span {
+  color: #7EDABF;
+  font-size: 14px;
+  font-weight: 600;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .vegAndNon_veg span img {
+  margin-right: 5px;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table {
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr {
+  border: noen;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td {
+  border: none;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #f1f1ff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td:first-child {
+  width: 70px;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td:nth-child(2) {
+  min-width: 180px;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td:nth-child(2) p {
+  text-align: left;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td .InStockButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  padding: 12px 25px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td .InStockButton:focus {
+  box-shadow: none;
+  outline: none;
+}
+.verticalTabSection .tab-content .tab-content .southIndiaBreakFastContent .table tr td .orderbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 12px 20px;
+  background-color: #FFA451;
+  border-radius: 20px;
+}
+
+.southIndiaFooterButton {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.southIndiaFooterButton span {
+  font-size: 13px;
+  color: #BEE8FF;
+  margin-right: 20px;
+}
+.southIndiaFooterButton a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  padding: 12px 25px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.southIndiaFooterButton a:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+body.collapseMenu .outerSectionLayout .leftSideSection {
+  max-width: 50px;
+}
+body.collapseMenu .outerSectionLayout .leftSideSection .dashboardLogoSection {
+  position: relative;
+}
+body.collapseMenu .outerSectionLayout .leftSideSection .dashboardLogoSection .mainLogo {
+  display: none;
+}
+body.collapseMenu .outerSectionLayout .leftSideSection .dashboardLogoSection .CookCap {
+  display: block;
+  width: 40px;
+}
+body.collapseMenu .outerSectionLayout .leftSideSection .dashbaordMenu ul li a {
+  padding: 13px 0 13px 10px;
+}
+body.collapseMenu .outerSectionLayout .leftSideSection .dashbaordMenu ul li a span {
+  display: none;
+}
+body.collapseMenu .outerSectionLayout .leftSideSection .logoutSection a span {
+  display: none;
+}
+body.collapseMenu .outerSectionLayout .rightSideSection {
+  margin-left: 50px;
+  width: calc(100% - 50px);
+}
+body.collapseMenu .outerSectionLayout .rightSideSection .dashbaordHeaderSection {
+  max-width: calc(100% - 50px);
 }
 
 /*# sourceMappingURL=style.css.map */

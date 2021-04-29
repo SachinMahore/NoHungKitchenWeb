@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="~/assets/css/animate.css">
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/assets/css/style.css">
-
+    <link href="~/Content/jquery-confirm-master/css/jquery-confirm.css" rel="stylesheet" />
     <script src="~/Content/Pages/KitchenRegistration.js"></script>
 
-    <title>Login | NOHUNG KITCHEN</title>
+    <title>REGISTRATION | NOHUNG KITCHEN</title>
 </head>
 <div class="loginBackground">
     <div class="loginBackgroundOverlay"></div>
@@ -30,7 +30,7 @@
                     <img src="~/assets/images/logo.svg" alt="">
                 </div>
                 <div class="loginHeading">
-                    <h2>LOGIN</h2>
+                    <h2>REGISTRATION</h2>
                 </div>
                 <div class="formContents" style="height:400px;overflow-y:scroll; overflow-x:hidden;">
                     <h4>Please provide basic details:</h4>
@@ -84,7 +84,7 @@
 
                     <div class="form-group">
                         <input type="text" id="txtOwnerName" autocomplete="off" class="form-control">
-                        <label for="OwnerName">OwnerName</label>
+                        <label for="OwnerName">Owner Name</label>
                     </div>
 
                     <div class="form-group">
@@ -95,50 +95,50 @@
 
                     <div class="form-group">
                         <input id="FUDocument" type="file" />
-                        <label for="UploadDocuments">UploadDocuments</label>
+                        <label for="UploadDocuments">Upload Kitchen Certificate</label>
                     </div>
 
 
 
                     <div class="form-group">
                         <input id="FUKitchen" type="file" />
-                        <label for="FUKitchen">KitchenImage</label>
+                        <label for="FUKitchen">Upload Kitchen Logo/Image</label>
                     </div>
 
                     <div class="form-group">
                         <input type="text" id="txtContactPerson" autocomplete="off" class="form-control">
-                        <label for="ContactPerson">ContactPerson</label>
+                        <label for="ContactPerson">Contact Person</label>
                     </div>
 
                     <div class="form-group">
                         <input type="text" id="txtContactPersonRole" autocomplete="off" class="form-control">
-                        <label for="ContactPersonRole">ContactPersonRole</label>
+                        <label for="ContactPersonRole">Contact Person Role</label>
                     </div>
 
 
                     <div class="form-group">
                         <input type="text" id="txtKitchenContactNo" autocomplete="off" class="form-control">
-                        <label for="KitchenContactNo">KitchenContactNo</label>
+                        <label for="KitchenContactNo">Kitchen Contact No.</label>
                     </div>
 
                     <div class="form-group">
                         <input type="text" id="txtFSSAILicenseNo" autocomplete="off" class="form-control">
-                        <label for="FSSAILicenseNo">FSSAILicenseNo</label>
+                        <label for="FSSAILicenseNo">FSSAI License No</label>
                     </div>
 
                     <div class="form-group">
                         <input type="date" id="txtExpiryDateOfLicense" autocomplete="off" class="form-control">
-                        <label for="ExpiryDateOfLicense">ExpiryDateOfLicense</label>
+                        <label for="ExpiryDateOfLicense">Expiry Date Of License</label>
                     </div>
 
                     <div class="form-group">
                         <input type="text" id="txtPanCardNo" autocomplete="off" class="form-control">
-                        <label for="PanCardNo">PanCardNo</label>
+                        <label for="PanCardNo">Pan Card No</label>
                     </div>
 
                     <div class="form-group">
                         <input type="text" id="txtGSTRegNo" autocomplete="off" class="form-control">
-                        <label for="GSTRegNo">GSTRegNo</label>
+                        <label for="GSTRegNo">GST Reg No</label>
                     </div>
 
                     <div class="form-group loginbuttonsSections">
@@ -167,10 +167,35 @@
 <body>
 
 </body>
+
 <script src="~/assets/js/jquery.min.js"></script>
+<script src="~/Content/jquery-confirm-master/js/jquery-confirm.js"></script>
 <script src="~/assets/js/popper.min.js"></script>
 <script src="~/assets/js/bootstrap.min.js"></script>
 <script src="~/assets/js/main.js"></script>
 
 </html>
+<style>
+    #divLoader {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        /*background: url(../../Content/assets/images/giphy.gif) center no-repeat rgba(255,255,255,0.5);*/
+        background: url(/Content/images/loading.gif) center no-repeat rgba(255,255,255,0.5);
+        display: none;
+    }
+</style>
+<script>
+    $(window).load(function () {
+        $("#divLoader").hide();
+    });
+
+    function showloaderfn() {
+        $("#divLoader").show();
+    }
+   
+</script>
 

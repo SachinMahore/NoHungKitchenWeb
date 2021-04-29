@@ -1,0 +1,1469 @@
+﻿
+@{
+    ViewBag.Title = "Orders Management";
+}
+
+<div class="offerManagementWrap">
+    <div class="offermanageTopHeading">
+        <h2>Orders Management</h2>
+        <!-- <a href=""> <img src="assets/images/OfferManagement_icons.svg" alt=""> Add Offer</a> -->
+    </div>
+</div>
+
+<div class="managementTabSection">
+    <div class="tabContentManagement">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#OrderRequests" role="tab">Order Requests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#ActiveOrders" role="tab">Active Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#UpcomingOrders" role="tab">Upcoming Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#OrderHistory" role="tab">Order History</a>
+            </li>
+        </ul>
+        <div class="managementFilterSection">
+            <button><img src="assets/images/filter.svg" alt=""></button>
+            <form action="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.996" height="19" viewBox="0 0 18.996 19">
+                    <path class="a" d="M18.866,18.021l-4.614-4.614a8.1,8.1,0,1,0-.8.8l4.614,4.614a.572.572,0,0,0,.4.169.555.555,0,0,0,.4-.169.569.569,0,0,0,0-.8ZM1.186,8.1a6.959,6.959,0,1,1,6.96,6.964A6.959,6.959,0,0,1,1.186,8.1Z" transform="translate(-0.035 0.01)"></path>
+                </svg>
+                <input type="text" placeholder="search...">
+            </form>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane active" id="OrderRequests" role="tabpanel">
+            <div class="orderManagementCotents">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <p>₹4,225</p>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Weekly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/Breakfast_icons.svg" alt="">
+                                        <h5>Breakfast</h5>
+                                    </div>
+                                </div>
+                                <div class="weeklyPlanFood">
+                                    <span>Monthly Plan</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Lunch</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <a class="rightCheckButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                    <a class="closedMarkButton" href=""><svg xmlns="http://www.w3.org/2000/svg" width="14.087" height="14.168" viewBox="0 0 14.087 14.168"><defs><style>
+                                                                                                                                                                                     .a {
+                                                                                                                                                                                         fill: #fff;
+                                                                                                                                                                                         stroke: #fff;
+                                                                                                                                                                                     }
+                                    </style></defs><path class="a" d="M7.742,6.679l5.1-5.1a.848.848,0,0,0-1.2-1.2l-5.1,5.1-5.1-5.1a.848.848,0,0,0-1.2,1.2l5.1,5.1-5.1,5.1a.848.848,0,1,0,1.2,1.2l5.1-5.1,5.1,5.1a.848.848,0,0,0,1.2-1.2Zm0,0" transform="translate(0.5 0.445)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="ActiveOrders" role="tabpanel">
+            <div class="orderManagementCotents">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                                <div class="orderManagementOptionButton">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01:00 PM</span>
+                                    <a class="ReadyToPickUpButotn" href="">Ready to Pick-up <svg xmlns="http://www.w3.org/2000/svg" width="17.886" height="13.087" viewBox="0 0 17.886 13.087"><defs><style>
+                                                                                                                                                                                                         .a {
+                                                                                                                                                                                                             fill: #fff;
+                                                                                                                                                                                                         }
+                                    </style></defs><path class="a" d="M154.422,169.354a1.5,1.5,0,0,1,0,2.125L144.341,181.56a1.5,1.5,0,0,1-2.125,0l-4.8-4.8a1.5,1.5,0,0,1,2.125-2.125l3.736,3.736,9.019-9.019a1.5,1.5,0,0,1,2.125,0Z" transform="translate(-136.976 -168.914)" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="UpcomingOrders" role="tabpanel">
+            <div class="orderManagementCotents">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contentOrderManagement">
+                            <div class="OrderManagementHeader">
+                                <div class="orderImages">
+                                    <img src="assets/images/userImg.png" alt="">
+                                    <div class="userNameOrdermanagement">
+                                        <h4>Jonathan Rhodes</h4>
+                                        <span>1234 <b>March 1st, 2021</b></span>
+                                    </div>
+                                </div>
+                                <a href=""><img src="assets/images/callingButton.svg" alt=""></a>
+                            </div>
+                            <div class="orderBodyManagement">
+                                <div class="weeklyPlanFood">
+                                    <span>Menu For Lunch</span>
+                                    <div class="weeklyPlanbreakFast">
+                                        <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                        <h5>Paneer Sabji + Roti + Dal + Rice + Salad</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderManagementFooter">
+                                <div class="orderManagementAddress">
+                                    <img src="assets/images/location_icons.svg" alt="">
+                                    <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="15.5" viewBox="0 0 32 15.5"><defs><style>
+                                                                                                                                                .a {
+                                                                                                                                                    fill: #fff;
+                                                                                                                                                }
+                                    </style></defs><path class="a" d="M31.633,138.865h0l-6.531-6.5a1.25,1.25,0,0,0-1.764,1.772l4.385,4.364H1.25a1.25,1.25,0,0,0,0,2.5H27.722l-4.385,4.364a1.25,1.25,0,0,0,1.764,1.772l6.531-6.5h0A1.251,1.251,0,0,0,31.633,138.865Z" transform="translate(0 -132)"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="OrderHistory" role="tabpanel">
+            <div class="orderManagementCotents">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="salesSummarySection">
+                            <img src="assets/images/kitchen.svg" alt="">
+                            <div class="summaryContent">
+                                <span>Sales Summary</span>
+                                <h3>Today, 13 Mar'21 <img src="assets/images/calendar_icons.svg" alt=""> </h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <p>15</p>
+                                    <span>Booked</span>
+                                </li>
+                                <li>
+                                    <p>13</p>
+                                    <span>Paid</span>
+                                </li>
+                                <li>
+                                    <p>02</p>
+                                    <span>Cancelled</span>
+                                </li>
+                            </ul>
+                            <div class="totalsalesSection">
+                                <img src="assets/images/delivery-money-bag-food-hamburger-payment.svg" alt="">
+                                <div class="salesTotalcontent">
+                                    <h4>Total Sales</h4>
+                                    <span>23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ProjectedTomorrowSection">
+                            <div class="TomorrowProjectContent">
+                                <span>23</span>
+                                <p>Projected Sales for Tomorrow</p>
+                            </div>
+                            <img src="assets/images/Flat.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="orderManagementCotents orderHistorySection">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contentOrderManagement">
+                                        <div class="OrderManagementHeader">
+                                            <div class="orderImages">
+                                                <img src="assets/images/userImg.png" alt="">
+                                                <div class="userNameOrdermanagement">
+                                                    <h4>Jonathan Rhodes</h4>
+                                                    <span>1234 <b>March 1st, 2021</b></span>
+                                                </div>
+                                            </div>
+                                            <!-- <p>₹4,225</p> -->
+                                        </div>
+                                        <div class="orderBodyManagement">
+                                            <div class="weeklyPlanFood">
+                                                <span>Weekly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/Breakfast_icons.svg" alt="">
+                                                    <h5>Breakfast</h5>
+                                                </div>
+                                            </div>
+                                            <div class="weeklyPlanFood">
+                                                <span>Monthly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                                    <h5>Lunch</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="orderManagementFooter">
+                                            <div class="orderManagementAddress">
+                                                <img src="assets/images/location_icons.svg" alt="">
+                                                <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                            </div>
+                                            <div class="orderManagementOptionButton">
+                                                <span>Lunch Delivered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contentOrderManagement">
+                                        <div class="OrderManagementHeader">
+                                            <div class="orderImages">
+                                                <img src="assets/images/userImg.png" alt="">
+                                                <div class="userNameOrdermanagement">
+                                                    <h4>Jonathan Rhodes</h4>
+                                                    <span>1234 <b>March 1st, 2021</b></span>
+                                                </div>
+                                            </div>
+                                            <!-- <p>₹4,225</p> -->
+                                        </div>
+                                        <div class="orderBodyManagement">
+                                            <div class="weeklyPlanFood">
+                                                <span>Weekly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/Breakfast_icons.svg" alt="">
+                                                    <h5>Breakfast</h5>
+                                                </div>
+                                            </div>
+                                            <div class="weeklyPlanFood">
+                                                <span>Monthly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                                    <h5>Lunch</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="orderManagementFooter">
+                                            <div class="orderManagementAddress">
+                                                <img src="assets/images/location_icons.svg" alt="">
+                                                <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                            </div>
+                                            <div class="orderManagementOptionButton">
+                                                <span>Lunch Delivered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contentOrderManagement">
+                                        <div class="OrderManagementHeader">
+                                            <div class="orderImages">
+                                                <img src="assets/images/userImg.png" alt="">
+                                                <div class="userNameOrdermanagement">
+                                                    <h4>Jonathan Rhodes</h4>
+                                                    <span>1234 <b>March 1st, 2021</b></span>
+                                                </div>
+                                            </div>
+                                            <!-- <p>₹4,225</p> -->
+                                        </div>
+                                        <div class="orderBodyManagement">
+                                            <div class="weeklyPlanFood">
+                                                <span>Weekly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/Breakfast_icons.svg" alt="">
+                                                    <h5>Breakfast</h5>
+                                                </div>
+                                            </div>
+                                            <div class="weeklyPlanFood">
+                                                <span>Monthly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                                    <h5>Lunch</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="orderManagementFooter">
+                                            <div class="orderManagementAddress">
+                                                <img src="assets/images/location_icons.svg" alt="">
+                                                <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                            </div>
+                                            <div class="orderManagementOptionButton">
+                                                <span>Lunch Delivered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contentOrderManagement">
+                                        <div class="OrderManagementHeader">
+                                            <div class="orderImages">
+                                                <img src="assets/images/userImg.png" alt="">
+                                                <div class="userNameOrdermanagement">
+                                                    <h4>Jonathan Rhodes</h4>
+                                                    <span>1234 <b>March 1st, 2021</b></span>
+                                                </div>
+                                            </div>
+                                            <!-- <p>₹4,225</p> -->
+                                        </div>
+                                        <div class="orderBodyManagement">
+                                            <div class="weeklyPlanFood">
+                                                <span>Weekly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/Breakfast_icons.svg" alt="">
+                                                    <h5>Breakfast</h5>
+                                                </div>
+                                            </div>
+                                            <div class="weeklyPlanFood">
+                                                <span>Monthly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                                    <h5>Lunch</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="orderManagementFooter">
+                                            <div class="orderManagementAddress">
+                                                <img src="assets/images/location_icons.svg" alt="">
+                                                <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                            </div>
+                                            <div class="orderManagementOptionButton">
+                                                <span>Lunch Delivered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contentOrderManagement">
+                                        <div class="OrderManagementHeader">
+                                            <div class="orderImages">
+                                                <img src="assets/images/userImg.png" alt="">
+                                                <div class="userNameOrdermanagement">
+                                                    <h4>Jonathan Rhodes</h4>
+                                                    <span>1234 <b>March 1st, 2021</b></span>
+                                                </div>
+                                            </div>
+                                            <!-- <p>₹4,225</p> -->
+                                        </div>
+                                        <div class="orderBodyManagement">
+                                            <div class="weeklyPlanFood">
+                                                <span>Weekly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/Breakfast_icons.svg" alt="">
+                                                    <h5>Breakfast</h5>
+                                                </div>
+                                            </div>
+                                            <div class="weeklyPlanFood">
+                                                <span>Monthly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                                    <h5>Lunch</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="orderManagementFooter">
+                                            <div class="orderManagementAddress">
+                                                <img src="assets/images/location_icons.svg" alt="">
+                                                <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                            </div>
+                                            <div class="orderManagementOptionButton">
+                                                <span>Lunch Delivered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contentOrderManagement">
+                                        <div class="OrderManagementHeader">
+                                            <div class="orderImages">
+                                                <img src="assets/images/userImg.png" alt="">
+                                                <div class="userNameOrdermanagement">
+                                                    <h4>Jonathan Rhodes</h4>
+                                                    <span>1234 <b>March 1st, 2021</b></span>
+                                                </div>
+                                            </div>
+                                            <!-- <p>₹4,225</p> -->
+                                        </div>
+                                        <div class="orderBodyManagement">
+                                            <div class="weeklyPlanFood">
+                                                <span>Weekly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/Breakfast_icons.svg" alt="">
+                                                    <h5>Breakfast</h5>
+                                                </div>
+                                            </div>
+                                            <div class="weeklyPlanFood">
+                                                <span>Monthly Plan</span>
+                                                <div class="weeklyPlanbreakFast">
+                                                    <img src="assets/images/indian_food_Lunch.svg" alt="">
+                                                    <h5>Lunch</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="orderManagementFooter">
+                                            <div class="orderManagementAddress">
+                                                <img src="assets/images/location_icons.svg" alt="">
+                                                <p>I-213, AB Heights, Manish Nagar, Nagpur 440034</p>
+                                            </div>
+                                            <div class="orderManagementOptionButton">
+                                                <span>Lunch Delivered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,4 +1,5 @@
 ﻿var saveregistration = function () {
+    $("#divLoader").show();
     var message = "";
     $formData = new FormData();
     var kitchenname = $("#txtKitchenName").val();
@@ -25,43 +26,59 @@
             $formData.append('file-' + i, kitchenimg.files[i]);
         }
     }
+   
+    if (uploaddocuments.files.length==0) {
+        $("#divLoader").hide();
+        $.alert({
+            title: 'Alert!',
+            content: "Please upload Kitchen Registration Certificate",
+            type: 'red'
+        });
+    } else {
+        //if (uploaddocuments.files.length > 0) {
+        //    for (var i = 0; i < uploaddocuments.files.length; i++) {
+        //        $formData.append('file-' + i, uploaddocuments.files[i]);
+        //    }
+        //}
+        $formData.append('KitchenName', kitchenname);
+        $formData.append('Mobile', mobile);
+        $formData.append('Email', email);
+        $formData.append('State', state);
+        $formData.append('City', city);
+        $formData.append('Pin', pin);
+        $formData.append('Address', address);
+        $formData.append('OwnerName', ownername);
+        $formData.append('Password', password);
+        $formData.append('UploadDocuments', uploaddocuments);
+        $formData.append('KitchenImage', kitchenimg);
+        $formData.append('ContactPerson', contactperson);
+        $formData.append('ContactPersonRole', contactpersonrole);
+        $formData.append('KitchenContactNo', kitchencontactno);
+        $formData.append('FSSAILicenseNo', fssailicenseno);
+        $formData.append('ExpiryDateOfLicense', expirydateoflicense);
+        $formData.append('PanCardNo', pancardno);
+        $formData.append('GSTRegNo', gstregno);
 
-    //if (uploaddocuments.files.length > 0) {
-    //    for (var i = 0; i < uploaddocuments.files.length; i++) {
-    //        $formData.append('file-' + i, uploaddocuments.files[i]);
-    //    }
-    //}
-    $formData.append('KitchenName', kitchenname);
-    $formData.append('Mobile', mobile);
-    $formData.append('Email', email);
-    $formData.append('State', state);
-    $formData.append('City', city);
-    $formData.append('Pin', pin);
-    $formData.append('Address', address);
-    $formData.append('OwnerName', ownername);
-    $formData.append('Password', password);
-    $formData.append('UploadDocuments', uploaddocuments);
-    $formData.append('KitchenImage', kitchenimg);
-    $formData.append('ContactPerson', contactperson);
-    $formData.append('ContactPersonRole', contactpersonrole);
-    $formData.append('KitchenContactNo', kitchencontactno);
-    $formData.append('FSSAILicenseNo', fssailicenseno);
-    $formData.append('ExpiryDateOfLicense', expirydateoflicense);
-    $formData.append('PanCardNo', pancardno);
-    $formData.append('GSTRegNo', gstregno);
 
+        $.ajax({
+            url: "/Registration/SaveRegistration",
+            method: "Post",
+            data: $formData,
+            contentType: false,
+            dataType: "json",
+            processData: false,
 
-    $.ajax({
-        url: "/Registration/SaveRegistration",
-        method: "Post",
-        data: $formData,
-        contentType: false,
-        dataType: "json",
-        processData: false,
+            success: function (response) {
+                $("#divLoader").hide();
+                $.alert({
+                    title: 'Alert!',
+                    content: response.message,
+                    type: 'blue'
+                });
+                setTimeout(function () { window.location = '/Login';  }, 3000);
+                
+            }
 
-        success: function (response) {
-            alert("Registration successfully");
-        }
-
-    });
+        });
+    }
 }

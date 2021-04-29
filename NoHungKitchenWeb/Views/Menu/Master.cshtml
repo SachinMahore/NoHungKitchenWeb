@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Master Menu";
+}
+
+<div class="noMenuAddedSection">
+    <h2>Master Menu</h2>
+    <div class="noMenuTabSection">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#AllMenu" role="tab">All Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#AllPackages" role="tab">All Packages</a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="AllMenu" role="tabpanel">
+                <div class="noMenuBodySection">
+                    <img src="~/assets/images/cusine.svg" alt="">
+                    <h2>No menu added yet</h2>
+                    <p>Look's like you, haven't made your menu yet.</p>
+                    <a href="~/Menu">Add Menu</a>
+                </div>
+            </div>
+            <div class="tab-pane" id="AllPackages" role="tabpanel">
+                <div class="noMenuBodySection">
+                    <img src="~/assets/images/noPackage_icon.svg" alt="">
+                    <h2>No packages added yet</h2>
+                    <p>Look's like you, haven't made your package yet.</p>
+                    <a href="~/Package">Create Package</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
