@@ -1,5 +1,4 @@
 ﻿
-Prashant git test
 var saveregistration = function () {
     $("#divLoader").show();
     var message = "";
