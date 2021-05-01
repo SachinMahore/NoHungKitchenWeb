@@ -1,6 +1,4 @@
-﻿
-Prashant git test
-var saveregistration = function () {
+﻿var saveregistration = function () {
     $("#divLoader").show();
     var message = "";
     $formData = new FormData();

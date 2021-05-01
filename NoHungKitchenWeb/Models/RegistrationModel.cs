@@ -70,7 +70,7 @@ namespace NoHungKitchenWeb.Models
                 fb1.SaveAs(filePath + "//" + sysFileName1);
                 if (!string.IsNullOrWhiteSpace(fb1.FileName))
                 {
-                    string afileName = HttpContext.Current.Server.MapPath("~/Content/Images/MenuPhoto/") + "/" + sysFileName1;
+                    string afileName = HttpContext.Current.Server.MapPath("~/Content/Images/Kitchen/") + "/" + sysFileName1;
 
                 }
             }
