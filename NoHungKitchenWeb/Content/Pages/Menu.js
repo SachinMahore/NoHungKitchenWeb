@@ -18,9 +18,9 @@ var savemenu = function (menuCat) {
     var kitchenid = $("#lblKitchenId").val();
     var menutitle = $("#txtMenuTitle" + menuCat).val();
     var category = menuCat;
-    var purchaseprice = $("#txtQty" + menuCat).val();
+    var qty = $("#txtQty" + menuCat).val();
     var saleprice = $("#txtSalePrice" + menuCat).val();
-    var discount = "0";
+    var status = "1";
     var description = $("#txtMenuTitle" + menuCat).val();
     var menuphoto = document.getElementById("fileInput" + menuCat);
     
@@ -32,9 +32,9 @@ var savemenu = function (menuCat) {
     $formData.append('KitchenId', kitchenid);
     $formData.append('MenuTitle', menutitle);
     $formData.append('Category', category);
-    $formData.append('PurchasePrice', purchaseprice);
+    $formData.append('Qty', qty);
     $formData.append('SalePrice', saleprice);
-    $formData.append('Discount', discount);
+    $formData.append('Status', status);
     $formData.append('Description', description);
     $formData.append('MenuPhoto', menuphoto);
 
@@ -42,7 +42,7 @@ var savemenu = function (menuCat) {
         message += "Please Enter Menu Title";
     } else if (saleprice == "") {
         message += "Please Enter Price";
-    } else if (purchaseprice == "") {
+    } else if (qty == "") {
         message += "Please Enter Qty";
     }
     if (message == "") {
@@ -54,11 +54,11 @@ var savemenu = function (menuCat) {
             dataType: 'json',
             processData: false,
             success: function (response) {
-                $.alert({
-                    title: 'Alert!',
-                    content: "Menu Added Successfully..!",
-                    type: 'blue'
-                });
+                //$.alert({
+                //    title: 'Alert!',
+                //    content: "Menu Added Successfully..!",
+                //    type: 'blue'
+                //});
                 getMenuList(menuCat);
             }
 
@@ -88,7 +88,7 @@ var getMenuList = function (menuCat) {
             $("#tblBMenu" + menuCat+" tbody").empty();
             $.each(response.model, function (index, elementValue) {
                 // html += "<tr><td>" + elementValue.MenuId + " </td><td>" + elementValue.KitchenId + "</td><td>" + elementValue.MenuTitle + "</td><td>" + elementValue.Category + "</td><td>" + elementValue.PurchasePrice + "</td><td>" + elementValue.SalePrice + " </td><td>" + elementValue.Discount + " </td><td>" + elementValue.Description + " </td><td>" + elementValue.MenuPhoto + "</td><td><input type='submit' value='Delete' onClick='deleteMenu(" + elementValue.MenuId + ")'/></td></tr>";
-                html += "<tr><td><img src='Content/Images/MenuPhoto/" + elementValue.MenuPhoto + "' width='50' height='45'/></td><td><p>" + elementValue.MenuTitle + "</p></td><td><p>₹" + elementValue.SalePrice + "</p></td><td><p>" + elementValue.PurchasePrice + "</p></td><td>  <a href='javascript: void (0);' class='InStockButton'>In Stock</a><td><a href='javascript:void (0);' ' onclick='deleteMenu(" + elementValue.MenuId + "," + elementValue.Category + ")'><img class='btn-sm btn-default' src='assets/images/trash.svg'></a></td></tr>";
+                html += "<tr><td><img src='Content/Images/MenuPhoto/" + elementValue.MenuPhoto + "' width='50' height='45'/></td><td><p>" + elementValue.MenuTitle + "</p></td><td><p>₹" + elementValue.SalePrice + "</p></td><td><p>" + elementValue.Qty + "</p></td><td>  <a href='javascript: void (0);' class='InStockButton'>In Stock</a><td><a href='javascript:void (0);' ' onclick='deleteMenu(" + elementValue.MenuId + "," + elementValue.Category + ")'><img class='btn-sm btn-default' src='assets/images/trash.svg'></a></td></tr>";
 
             });
             $("#tblBMenu" + menuCat +" tbody").append(html);

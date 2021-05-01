@@ -12,17 +12,13 @@ namespace NoHungKitchenWeb.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class tblMenu
+    public partial class tblCustomer
     {
-        public long MenuId { get; set; }
-        public int KitchenId { get; set; }
-        public string MenuTitle { get; set; }
-        public int Category { get; set; }
-        public Nullable<int> Cuisine { get; set; }
-        public decimal SalePrice { get; set; }
-        public string Qty { get; set; }
-        public string Description { get; set; }
-        public string MenuPhoto { get; set; }
-        public Nullable<int> Status { get; set; }
+        public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
+        public string Mobile { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public System.DateTime JoiningDate { get; set; }
     }
 }

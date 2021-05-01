@@ -26,6 +26,7 @@ namespace NoHungKitchenWeb.Data
         public string Password { get; set; }
         public string UploadDocuments { get; set; }
         public string KitchenImage { get; set; }
+        public string MenuImage { get; set; }
         public string ContactPerson { get; set; }
         public string ContactPersonRole { get; set; }
         public string KitchenContactNo { get; set; }
@@ -33,5 +34,6 @@ namespace NoHungKitchenWeb.Data
         public string ExpiryDateOfLicense { get; set; }
         public string PanCardNo { get; set; }
         public string GSTRegNo { get; set; }
+        public Nullable<int> Status { get; set; }
     }
 }

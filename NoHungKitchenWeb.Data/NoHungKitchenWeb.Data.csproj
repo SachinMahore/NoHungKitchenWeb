@@ -66,10 +66,16 @@
       <DependentUpon>NoHungKitchenWebEntity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tblCustomer.cs">
+      <DependentUpon>NoHungKitchenWebEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="tblKitchenMaster.cs">
       <DependentUpon>NoHungKitchenWebEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="tblMenu.cs">
+      <DependentUpon>NoHungKitchenWebEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblOFFER.cs">
       <DependentUpon>NoHungKitchenWebEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="tblOrder.cs">

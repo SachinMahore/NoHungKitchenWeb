@@ -14,12 +14,12 @@ namespace NoHungKitchenWeb.Models
         public int KitchenId { get; set; }
         public string MenuTitle { get; set; }
         public int Category { get; set; }
-        public string PurchasePrice { get; set; }
-        public string SalePrice { get; set; }
-        public string Discount { get; set; }
+        public Nullable<int> Cuisine { get; set; }
+        public decimal SalePrice { get; set; }
+        public string Qty { get; set; }
         public string Description { get; set; }
         public string MenuPhoto { get; set; }
-
+        public Nullable<int> Status { get; set; }
         public string SaveMenu(HttpPostedFileBase fb, MenuModel model)
         {
             string Message = "";
@@ -52,9 +52,9 @@ namespace NoHungKitchenWeb.Models
                 KitchenId = model.KitchenId,
                 MenuTitle = model.MenuTitle,
                 Category = model.Category,
-                PurchasePrice = model.PurchasePrice,
+                Qty = model.Qty,
                 SalePrice = model.SalePrice,
-                Discount = model.Discount,
+                Status = model.Status,
                 Description = model.Description,
                 MenuPhoto = sysFileName,
 
@@ -82,9 +82,9 @@ namespace NoHungKitchenWeb.Models
                         KitchenId = MenuList.KitchenId,
                         MenuTitle = MenuList.MenuTitle,
                         Category = MenuList.Category,
-                        PurchasePrice = MenuList.PurchasePrice,
+                        Qty = MenuList.Qty,
                         SalePrice = MenuList.SalePrice,
-                        Discount = MenuList.Discount,
+                        Status = MenuList.Status,
                         Description = MenuList.Description,
                         MenuPhoto = MenuList.MenuPhoto,
                     });

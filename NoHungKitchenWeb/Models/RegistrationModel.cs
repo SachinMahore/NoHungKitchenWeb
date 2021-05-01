@@ -23,6 +23,7 @@ namespace NoHungKitchenWeb.Models
         public string Password { get; set; }
         public string UploadDocuments { get; set; }
         public string KitchenImage { get; set; }
+        public string MenuImage { get; set; }
         public string ContactPerson { get; set; }
         public string ContactPersonRole { get; set; }
         public string KitchenContactNo { get; set; }
@@ -30,25 +31,28 @@ namespace NoHungKitchenWeb.Models
         public string ExpiryDateOfLicense { get; set; }
         public string PanCardNo { get; set; }
         public string GSTRegNo { get; set; }
-
-        public string SaveRegistration(HttpPostedFileBase fb, RegistrationModel model)
+        public Nullable<int> Status { get; set; }
+        public string SaveRegistration(HttpPostedFileBase fb, HttpPostedFileBase fb1, HttpPostedFileBase fb2, RegistrationModel model)
         {
             string Message = "";
             NoHungKitchenWebEntities db = new NoHungKitchenWebEntities();
             string filePath = "";
             string fileName = "";
             string sysFileName = "";
+            string fileName1 = "";
+            string sysFileName1 = "";
+            string fileName2 = "";
+            string sysFileName2 = "";
 
-
+            filePath = HttpContext.Current.Server.MapPath("~/Content/images/Kitchen/");
+            DirectoryInfo di = new DirectoryInfo(filePath);
+            if (!di.Exists)
+            {
+                di.Create();
+            }
             if (fb != null && fb.ContentLength > 0)
             {
-                filePath = HttpContext.Current.Server.MapPath("~/Content/images/Kitchen/");
-                //filePath = HttpContext.Current.Server.MapPath("~/Content/documetns/Kitchendocuments/");
-                DirectoryInfo di = new DirectoryInfo(filePath);
-                if (!di.Exists)
-                {
-                    di.Create();
-                }
+               
                 fileName = fb.FileName;
                 sysFileName = DateTime.Now.ToFileTime().ToString() + Path.GetExtension(fb.FileName);
                 fb.SaveAs(filePath + "//" + sysFileName);
@@ -56,6 +60,28 @@ namespace NoHungKitchenWeb.Models
                 {
                     string afileName = HttpContext.Current.Server.MapPath("~/Content/images/Kitchen/") + "/" + sysFileName;
                     //string afileName = HttpContext.Current.Server.MapPath("~/Content/documents/Kitchendocuments/") + "/" + sysFileName;
+
+                }
+            }
+            if (fb1 != null && fb1.ContentLength > 0)
+            {               
+                fileName1 = fb1.FileName;
+                sysFileName1 = DateTime.Now.ToFileTime().ToString() + Path.GetExtension(fb1.FileName);
+                fb1.SaveAs(filePath + "//" + sysFileName1);
+                if (!string.IsNullOrWhiteSpace(fb1.FileName))
+                {
+                    string afileName = HttpContext.Current.Server.MapPath("~/Content/Images/MenuPhoto/") + "/" + sysFileName1;
+
+                }
+            }
+            if (fb2 != null && fb1.ContentLength > 0)
+            {
+                fileName2 = fb1.FileName;
+                sysFileName2 = DateTime.Now.ToFileTime().ToString() + Path.GetExtension(fb2.FileName);
+                fb2.SaveAs(filePath + "//" + sysFileName2);
+                if (!string.IsNullOrWhiteSpace(fb2.FileName))
+                {
+                    string afileName = HttpContext.Current.Server.MapPath("~/Content/Images/MenuPhoto/") + "/" + sysFileName2;
 
                 }
             }
@@ -73,8 +99,9 @@ namespace NoHungKitchenWeb.Models
                     Address = model.Address,
                     OwnerName = model.OwnerName,
                     Password = model.Password,
-                    UploadDocuments = model.UploadDocuments,
+                    UploadDocuments = sysFileName1,
                     KitchenImage = sysFileName,
+                    MenuImage=sysFileName2,
                     ContactPerson = model.ContactPerson,
                     ContactPersonRole = model.ContactPersonRole,
                     KitchenContactNo = model.KitchenContactNo,

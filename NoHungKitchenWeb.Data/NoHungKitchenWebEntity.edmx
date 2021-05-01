@@ -5,6 +5,17 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="NoHungKitchenWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="JoiningDate" Type="date" Nullable="false" />
+        </EntityType>
         <EntityType Name="tblKitchenMaster">
           <Key>
             <PropertyRef Name="KitchenId" />
@@ -21,6 +32,7 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="UploadDocuments" Type="nvarchar" MaxLength="500" />
           <Property Name="KitchenImage" Type="nvarchar" MaxLength="500" />
+          <Property Name="MenuImage" Type="nvarchar" MaxLength="500" />
           <Property Name="ContactPerson" Type="nvarchar" MaxLength="50" />
           <Property Name="ContactPersonRole" Type="nvarchar" MaxLength="50" />
           <Property Name="KitchenContactNo" Type="nvarchar" MaxLength="50" />
@@ -28,6 +40,7 @@
           <Property Name="ExpiryDateOfLicense" Type="nvarchar" MaxLength="50" />
           <Property Name="PanCardNo" Type="nvarchar" MaxLength="50" />
           <Property Name="GSTRegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="tblMenu">
           <Key>
@@ -37,11 +50,29 @@
           <Property Name="KitchenId" Type="int" Nullable="false" />
           <Property Name="MenuTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Category" Type="int" Nullable="false" />
-          <Property Name="PurchasePrice" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="SalePrice" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Discount" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
-          <Property Name="MenuPhoto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cuisine" Type="int" />
+          <Property Name="SalePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Qty" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="MenuPhoto" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="tblOFFER">
+          <Key>
+            <PropertyRef Name="OfferId" />
+          </Key>
+          <Property Name="OfferId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OfferTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiscountCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiscountType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiscountValue" Type="int" />
+          <Property Name="AppliedTo" Type="nvarchar" MaxLength="50" />
+          <Property Name="MinimumRequirement" Type="nvarchar" MaxLength="50" />
+          <Property Name="UsageLimit" Type="int" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="StartTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="EndTime" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tblOrder">
           <Key>
@@ -126,8 +157,10 @@
           <Property Name="BikeType" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="NoHungKitchenWebModelStoreContainer">
+          <EntitySet Name="tblCustomer" EntityType="Self.tblCustomer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblKitchenMaster" EntityType="Self.tblKitchenMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblMenu" EntityType="Self.tblMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblOFFER" EntityType="Self.tblOFFER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblOrder" EntityType="Self.tblOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblOrderMenu" EntityType="Self.tblOrderMenu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblPackage" EntityType="Self.tblPackage" Schema="dbo" store:Type="Tables" />
@@ -138,44 +171,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NoHungKitchenWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="tblKitchenMaster">
-          <Key>
-            <PropertyRef Name="KitchenId" />
-          </Key>
-          <Property Name="KitchenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KitchenName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="OwnerName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UploadDocuments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="KitchenImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="ContactPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ContactPersonRole" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="KitchenContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="FSSAILicenseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ExpiryDateOfLicense" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PanCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="GSTRegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="tblMenu">
-          <Key>
-            <PropertyRef Name="MenuId" />
-          </Key>
-          <Property Name="MenuId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KitchenId" Type="Int32" Nullable="false" />
-          <Property Name="MenuTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Category" Type="Int32" Nullable="false" />
-          <Property Name="PurchasePrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SalePrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Discount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MenuPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="tblRider">
           <Key>
             <PropertyRef Name="RiderId" />
@@ -194,13 +189,15 @@
           <Property Name="BikeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityContainer Name="NoHungKitchenWebEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tblKitchenMasters" EntityType="Self.tblKitchenMaster" />
-          <EntitySet Name="tblMenus" EntityType="Self.tblMenu" />
           <EntitySet Name="tblRiders" EntityType="Self.tblRider" />
           <EntitySet Name="tblPackages" EntityType="NoHungKitchenWebModel.tblPackage" />
           <EntitySet Name="tblPackageDetails" EntityType="NoHungKitchenWebModel.tblPackageDetail" />
           <EntitySet Name="tblOrders" EntityType="NoHungKitchenWebModel.tblOrder" />
           <EntitySet Name="tblOrderMenus" EntityType="NoHungKitchenWebModel.tblOrderMenu" />
+          <EntitySet Name="tblMenus" EntityType="NoHungKitchenWebModel.tblMenu" />
+          <EntitySet Name="tblCustomers" EntityType="NoHungKitchenWebModel.tblCustomer" />
+          <EntitySet Name="tblKitchenMasters" EntityType="NoHungKitchenWebModel.tblKitchenMaster" />
+          <EntitySet Name="tblOFFERs" EntityType="NoHungKitchenWebModel.tblOFFER" />
         </EntityContainer>
         <EntityType Name="tblPackage">
           <Key>
@@ -267,52 +264,81 @@
           <Property Name="Discount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tax" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="tblMenu">
+          <Key>
+            <PropertyRef Name="MenuId" />
+          </Key>
+          <Property Name="MenuId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KitchenId" Type="Int32" Nullable="false" />
+          <Property Name="MenuTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="Int32" Nullable="false" />
+          <Property Name="Cuisine" Type="Int32" />
+          <Property Name="SalePrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Qty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MenuPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JoiningDate" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tblKitchenMaster">
+          <Key>
+            <PropertyRef Name="KitchenId" />
+          </Key>
+          <Property Name="KitchenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KitchenName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UploadDocuments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KitchenImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MenuImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContactPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactPersonRole" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KitchenContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FSSAILicenseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExpiryDateOfLicense" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PanCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GSTRegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblOFFER">
+          <Key>
+            <PropertyRef Name="OfferId" />
+          </Key>
+          <Property Name="OfferId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OfferTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiscountCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiscountType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiscountValue" Type="Int32" />
+          <Property Name="AppliedTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MinimumRequirement" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UsageLimit" Type="Int32" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="StartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EndTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="NoHungKitchenWebModelStoreContainer" CdmEntityContainer="NoHungKitchenWebEntities">
-          <EntitySetMapping Name="tblKitchenMasters">
-            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblKitchenMaster">
-              <MappingFragment StoreEntitySet="tblKitchenMaster">
-                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
-                <ScalarProperty Name="KitchenName" ColumnName="KitchenName" />
-                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Pin" ColumnName="Pin" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="UploadDocuments" ColumnName="UploadDocuments" />
-                <ScalarProperty Name="KitchenImage" ColumnName="KitchenImage" />
-                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
-                <ScalarProperty Name="ContactPersonRole" ColumnName="ContactPersonRole" />
-                <ScalarProperty Name="KitchenContactNo" ColumnName="KitchenContactNo" />
-                <ScalarProperty Name="FSSAILicenseNo" ColumnName="FSSAILicenseNo" />
-                <ScalarProperty Name="ExpiryDateOfLicense" ColumnName="ExpiryDateOfLicense" />
-                <ScalarProperty Name="PanCardNo" ColumnName="PanCardNo" />
-                <ScalarProperty Name="GSTRegNo" ColumnName="GSTRegNo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblMenus">
-            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblMenu">
-              <MappingFragment StoreEntitySet="tblMenu">
-                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
-                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
-                <ScalarProperty Name="MenuTitle" ColumnName="MenuTitle" />
-                <ScalarProperty Name="Category" ColumnName="Category" />
-                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
-                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="MenuPhoto" ColumnName="MenuPhoto" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblRiders">
             <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblRider">
               <MappingFragment StoreEntitySet="tblRider">
@@ -397,6 +423,79 @@
                 <ScalarProperty Name="MenuId" ColumnName="MenuId" />
                 <ScalarProperty Name="OrderId" ColumnName="OrderId" />
                 <ScalarProperty Name="OMId" ColumnName="OMId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMenus">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblMenu">
+              <MappingFragment StoreEntitySet="tblMenu">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MenuPhoto" ColumnName="MenuPhoto" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+                <ScalarProperty Name="Cuisine" ColumnName="Cuisine" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="MenuTitle" ColumnName="MenuTitle" />
+                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
+                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCustomers">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblCustomer">
+              <MappingFragment StoreEntitySet="tblCustomer">
+                <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKitchenMasters">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblKitchenMaster">
+              <MappingFragment StoreEntitySet="tblKitchenMaster">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="GSTRegNo" ColumnName="GSTRegNo" />
+                <ScalarProperty Name="PanCardNo" ColumnName="PanCardNo" />
+                <ScalarProperty Name="ExpiryDateOfLicense" ColumnName="ExpiryDateOfLicense" />
+                <ScalarProperty Name="FSSAILicenseNo" ColumnName="FSSAILicenseNo" />
+                <ScalarProperty Name="KitchenContactNo" ColumnName="KitchenContactNo" />
+                <ScalarProperty Name="ContactPersonRole" ColumnName="ContactPersonRole" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="MenuImage" ColumnName="MenuImage" />
+                <ScalarProperty Name="KitchenImage" ColumnName="KitchenImage" />
+                <ScalarProperty Name="UploadDocuments" ColumnName="UploadDocuments" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="KitchenName" ColumnName="KitchenName" />
+                <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOFFERs">
+            <EntityTypeMapping TypeName="NoHungKitchenWebModel.tblOFFER">
+              <MappingFragment StoreEntitySet="tblOFFER">
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+                <ScalarProperty Name="MinimumRequirement" ColumnName="MinimumRequirement" />
+                <ScalarProperty Name="AppliedTo" ColumnName="AppliedTo" />
+                <ScalarProperty Name="DiscountValue" ColumnName="DiscountValue" />
+                <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+                <ScalarProperty Name="DiscountCode" ColumnName="DiscountCode" />
+                <ScalarProperty Name="OfferTitle" ColumnName="OfferTitle" />
+                <ScalarProperty Name="OfferId" ColumnName="OfferId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

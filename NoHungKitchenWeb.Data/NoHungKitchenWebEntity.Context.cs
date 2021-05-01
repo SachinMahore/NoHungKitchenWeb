@@ -25,12 +25,14 @@ namespace NoHungKitchenWeb.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tblKitchenMaster> tblKitchenMasters { get; set; }
-        public virtual DbSet<tblMenu> tblMenus { get; set; }
         public virtual DbSet<tblRider> tblRiders { get; set; }
         public virtual DbSet<tblPackage> tblPackages { get; set; }
         public virtual DbSet<tblPackageDetail> tblPackageDetails { get; set; }
         public virtual DbSet<tblOrder> tblOrders { get; set; }
         public virtual DbSet<tblOrderMenu> tblOrderMenus { get; set; }
+        public virtual DbSet<tblMenu> tblMenus { get; set; }
+        public virtual DbSet<tblCustomer> tblCustomers { get; set; }
+        public virtual DbSet<tblKitchenMaster> tblKitchenMasters { get; set; }
+        public virtual DbSet<tblOFFER> tblOFFERs { get; set; }
     }
 }

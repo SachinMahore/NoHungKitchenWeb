@@ -5,13 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7a0994018d954a58af8dc8183eddcd51" Name="Diagram1">
-        <EntityTypeShape EntityType="NoHungKitchenWebModel.tblKitchenMaster" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoHungKitchenWebModel.tblMenu" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NoHungKitchenWebModel.tblRider" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NoHungKitchenWebModel.tblPackage" Width="1.5" PointX="0.75" PointY="8.75" />
         <EntityTypeShape EntityType="NoHungKitchenWebModel.tblPackageDetail" Width="1.5" PointX="2.75" PointY="8.75" />
         <EntityTypeShape EntityType="NoHungKitchenWebModel.tblOrder" Width="1.5" PointX="5.375" PointY="8.75" />
         <EntityTypeShape EntityType="NoHungKitchenWebModel.tblOrderMenu" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="NoHungKitchenWebModel.tblMenu" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NoHungKitchenWebModel.tblCustomer" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NoHungKitchenWebModel.tblKitchenMaster" Width="1.5" PointX="7.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NoHungKitchenWebModel.tblOFFER" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
